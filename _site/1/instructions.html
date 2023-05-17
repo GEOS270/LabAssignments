@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.313">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>GEOS 270 Labs - Introduction to ArcGIS Pro</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar docked nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">GEOS 270 Labs</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../labs.html" aria-current="page">
+ <span class="menu-text">Lab Assignments</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/GEOS270"><i class="bi bi-github" role="img" aria-label="Quarto GitHub">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Introduction to ArcGIS Pro</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../labs.html" class="sidebar-item-text sidebar-link">Lab Assignments</a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../1/objectives.html" class="sidebar-item-text sidebar-link">Lab 1</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../1/instructions.html" class="sidebar-item-text sidebar-link active">Introduction to ArcGIS Pro</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../1/questions.html" class="sidebar-item-text sidebar-link">Lab Assignment Questions</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../2/objectives.html" class="sidebar-item-text sidebar-link">Lab 2</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../2/instructions.html" class="sidebar-item-text sidebar-link">Coordinate Reference Systems</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../2/questions.html" class="sidebar-item-text sidebar-link">Lab Assignment Questions</a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#part-1-arcgis-pro-tutorial" id="toc-part-1-arcgis-pro-tutorial" class="nav-link active" data-scroll-target="#part-1-arcgis-pro-tutorial">Part 1: ArcGIS Pro Tutorial</a>
+  <ul class="collapse">
+  <li><a href="#make-your-first-map" id="toc-make-your-first-map" class="nav-link" data-scroll-target="#make-your-first-map">Make Your First Map</a>
+  <ul class="collapse">
+  <li><a href="#export-your-map" id="toc-export-your-map" class="nav-link" data-scroll-target="#export-your-map">Export Your Map</a></li>
+  </ul></li>
+  <li><a href="#more-tutorial-videos" id="toc-more-tutorial-videos" class="nav-link" data-scroll-target="#more-tutorial-videos">More Tutorial Videos</a>
+  <ul class="collapse">
+  <li><a href="#explore-your-data" id="toc-explore-your-data" class="nav-link" data-scroll-target="#explore-your-data">Explore your data</a></li>
+  <li><a href="#make-a-layout" id="toc-make-a-layout" class="nav-link" data-scroll-target="#make-a-layout">Make a layout</a></li>
+  <li><a href="#use-geoprocessing-tools" id="toc-use-geoprocessing-tools" class="nav-link" data-scroll-target="#use-geoprocessing-tools">Use Geoprocessing Tools</a></li>
+  <li><a href="#create-points-on-a-map" id="toc-create-points-on-a-map" class="nav-link" data-scroll-target="#create-points-on-a-map">Create Points on a Map</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#part-2-foundations-of-epidemiology" id="toc-part-2-foundations-of-epidemiology" class="nav-link" data-scroll-target="#part-2-foundations-of-epidemiology">Part 2: Foundations of Epidemiology</a>
+  <ul class="collapse">
+  <li><a href="#london-cholera-outbreak" id="toc-london-cholera-outbreak" class="nav-link" data-scroll-target="#london-cholera-outbreak">1854 London Cholera Outbreak</a></li>
+  <li><a href="#setting-up-a-project" id="toc-setting-up-a-project" class="nav-link" data-scroll-target="#setting-up-a-project">Setting up a Project</a>
+  <ul class="collapse">
+  <li><a href="#geodatabases" id="toc-geodatabases" class="nav-link" data-scroll-target="#geodatabases">Geodatabases</a></li>
+  <li><a href="#download-data" id="toc-download-data" class="nav-link" data-scroll-target="#download-data">Download Data</a></li>
+  <li><a href="#extract-the-data" id="toc-extract-the-data" class="nav-link" data-scroll-target="#extract-the-data">Extract the Data</a></li>
+  <li><a href="#save-it-to-your-project-folder" id="toc-save-it-to-your-project-folder" class="nav-link" data-scroll-target="#save-it-to-your-project-folder">Save it to your Project Folder!</a></li>
+  </ul></li>
+  <li><a href="#working-with-historical-data" id="toc-working-with-historical-data" class="nav-link" data-scroll-target="#working-with-historical-data">Working with Historical Data</a>
+  <ul class="collapse">
+  <li><a href="#georeferencing" id="toc-georeferencing" class="nav-link" data-scroll-target="#georeferencing">Georeferencing</a></li>
+  </ul></li>
+  <li><a href="#adding-a-feature-dataset" id="toc-adding-a-feature-dataset" class="nav-link" data-scroll-target="#adding-a-feature-dataset">Adding a Feature Dataset</a>
+  <ul class="collapse">
+  <li><a href="#inspect-the-data" id="toc-inspect-the-data" class="nav-link" data-scroll-target="#inspect-the-data">Inspect the Data</a></li>
+  </ul></li>
+  <li><a href="#creating-a-new-feature-dataset" id="toc-creating-a-new-feature-dataset" class="nav-link" data-scroll-target="#creating-a-new-feature-dataset">Creating a New Feature Dataset</a>
+  <ul class="collapse">
+  <li><a href="#digitizing-a-point" id="toc-digitizing-a-point" class="nav-link" data-scroll-target="#digitizing-a-point">Digitizing a Point</a></li>
+  <li><a href="#save-your-project." id="toc-save-your-project." class="nav-link" data-scroll-target="#save-your-project.">Save your project.</a></li>
+  </ul></li>
+  <li><a href="#adjusting-symbology" id="toc-adjusting-symbology" class="nav-link" data-scroll-target="#adjusting-symbology">Adjusting Symbology</a>
+  <ul class="collapse">
+  <li><a href="#adding-labels" id="toc-adding-labels" class="nav-link" data-scroll-target="#adding-labels">Adding Labels</a></li>
+  <li><a href="#symbolize-by-count" id="toc-symbolize-by-count" class="nav-link" data-scroll-target="#symbolize-by-count">Symbolize by Count</a></li>
+  <li><a href="#save-your-project.-1" id="toc-save-your-project.-1" class="nav-link" data-scroll-target="#save-your-project.-1">Save your project.</a></li>
+  </ul></li>
+  <li><a href="#spatial-analysis" id="toc-spatial-analysis" class="nav-link" data-scroll-target="#spatial-analysis">Spatial Analysis</a>
+  <ul class="collapse">
+  <li><a href="#measures-of-central-tendency" id="toc-measures-of-central-tendency" class="nav-link" data-scroll-target="#measures-of-central-tendency">Measures of Central Tendency</a></li>
+  <li><a href="#kernel-density" id="toc-kernel-density" class="nav-link" data-scroll-target="#kernel-density">Kernel Density</a></li>
+  <li><a href="#save-your-project.-2" id="toc-save-your-project.-2" class="nav-link" data-scroll-target="#save-your-project.-2">Save your project.</a></li>
+  </ul></li>
+  <li><a href="#making-a-map" id="toc-making-a-map" class="nav-link" data-scroll-target="#making-a-map">Making a Map</a>
+  <ul class="collapse">
+  <li><a href="#creating-a-layout" id="toc-creating-a-layout" class="nav-link" data-scroll-target="#creating-a-layout">Creating a Layout</a></li>
+  </ul></li>
+  <li><a href="#adding-map-elements" id="toc-adding-map-elements" class="nav-link" data-scroll-target="#adding-map-elements">Adding Map Elements</a>
+  <ul class="collapse">
+  <li><a href="#legend" id="toc-legend" class="nav-link" data-scroll-target="#legend">Legend</a></li>
+  <li><a href="#title" id="toc-title" class="nav-link" data-scroll-target="#title">Title</a></li>
+  <li><a href="#source-statement" id="toc-source-statement" class="nav-link" data-scroll-target="#source-statement">Source Statement</a></li>
+  <li><a href="#scale-bar-and-north-arrow" id="toc-scale-bar-and-north-arrow" class="nav-link" data-scroll-target="#scale-bar-and-north-arrow">Scale Bar and North Arrow</a></li>
+  </ul></li>
+  <li><a href="#export-your-map-1" id="toc-export-your-map-1" class="nav-link" data-scroll-target="#export-your-map-1">Export Your Map</a>
+  <ul class="collapse">
+  <li><a href="#save-your-project.-3" id="toc-save-your-project.-3" class="nav-link" data-scroll-target="#save-your-project.-3">Save your project.</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block">Introduction to ArcGIS Pro</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="part-1-arcgis-pro-tutorial" class="level1">
+<h1>Part 1: ArcGIS Pro Tutorial</h1>
+<p>To get familiar with ArcGIS Pro, you will complete an Introduction to ArcGIS Pro tutorial and watch a four other short videos. The tutorial will take about 25 minutes and give you a brief overview of the ArcGIS Pro. The videos illustrate other important aspects of the ArcGIS Pro software package and will take about 10-15 minutes to watch.</p>
+<section id="make-your-first-map" class="level2">
+<h2 class="anchored" data-anchor-id="make-your-first-map">Make Your First Map</h2>
+<p>If you have purchased ArcGIS Pro, you can sign in through the UBC ArcGIS online account you created. If you are using the lab computers, and don’t already have one, create a public account:</p>
+<ul>
+<li>Click “Sign In” in the top right of <a href="https://www.esri.com/training/">this page</a></li>
+<li>Click “Create a public account” and follow the steps</li>
+</ul>
+<p>Go to the <a href="https://pro.arcgis.com/en/pro-app/latest/get-started/introducing-arcgis-pro.htm">Introducing ArcGISPro</a> tutorial. Watch the short introductory video, then work through the steps. <strong>You will be submitting a map from this tutorial for credit.</strong></p>
+<ul>
+<li>You already have a project open, so you can start with Open the project step 2 <em>Note</em>.</li>
+<li><em>Note</em>, if you have trouble in “Opening the project, Step 3” for either tutorial, you can download the data for off line use instead</li>
+<li>When you get to “Explore Views, Step 7”, double click on the map title and add your name following the video below.</li>
+</ul>
+<p><video src="videos/Part1_Author.mp4" class="img-fluid" style="width:75.0%" controls=""><a href="videos/Part1_Author.mp4">Video</a></video></p>
+<section id="export-your-map" class="level3">
+<h3 class="anchored" data-anchor-id="export-your-map">Export Your Map</h3>
+<p>Save the layout as a .pdf, name it <em>Central_Wellington_Layout.pdf</em>. You will upload this map to canvas. To save your layout reference the image below.</p>
+<ol type="1">
+<li><p>Click Share.</p></li>
+<li><p>Click Layout Export.</p></li>
+<li><p>Specify the output location and name your file. Its best to use your Lab1_Project workspace so you can easily find this when its time to submit you map.</p></li>
+<li><p>Click Export.</p></li>
+</ol>
+<p><img src="images/ExportLayout.png" class="img-fluid" style="width:75.0%"></p>
+</section>
+</section>
+<section id="more-tutorial-videos" class="level2">
+<h2 class="anchored" data-anchor-id="more-tutorial-videos">More Tutorial Videos</h2>
+<p>ESRI offers quite a few tutorials on ArcGIS Pro. Feel free to work though them if you have time! But we’re just going to watch the overview videos from four tutorials to learn a bit more about what we can do with ArcGIS Pro. I’ve hyperlinked to each tutoral page for your reference and embeded the relevant video below each video link.</p>
+<section id="explore-your-data" class="level3">
+<h3 class="anchored" data-anchor-id="explore-your-data">Explore your data</h3>
+<p>This tutorial shows you how you can interact with and explore data layers. You can find the tutorial instructions <a href="https://pro.arcgis.com/en/pro-app/latest/get-started/explore-your-data.htm">here</a> or watch the video below.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p8ZeOffTG-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="make-a-layout" class="level3">
+<h3 class="anchored" data-anchor-id="make-a-layout">Make a layout</h3>
+<p>This tutorial shows you how you can use map layouts to visualize data. You can find the tutorial instructions <a href="https://pro.arcgis.com/en/pro-app/latest/get-started/add-maps-to-a-layout.htm">here</a> or watch the video below.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NZ9ei4-23MM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="use-geoprocessing-tools" class="level3">
+<h3 class="anchored" data-anchor-id="use-geoprocessing-tools">Use Geoprocessing Tools</h3>
+<p>This tutorial shows a few of the ways you can analyze geospatial data and see how different layers interact. You can find the tutorial instructions <a href="https://pro.arcgis.com/en/pro-app/latest/get-started/use-geoprocessing-tools.htm">here</a> or watch the video below.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/hdkHhaYHXyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+<section id="create-points-on-a-map" class="level3">
+<h3 class="anchored" data-anchor-id="create-points-on-a-map">Create Points on a Map</h3>
+<p>This tutorial shows how you can create a feature class and populate it with point features. You can find the tutorial instructions <a href="https://pro.arcgis.com/en/pro-app/latest/get-started/create-points-on-a-map.htm">here</a> or watch the video below.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9LGPCDMUP2Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+</section>
+</section>
+</section>
+<section id="part-2-foundations-of-epidemiology" class="level1">
+<h1>Part 2: Foundations of Epidemiology</h1>
+<p>We are going to replicate one of the foundational studies in <a href="https://en.wikipedia.org/wiki/Epidemiology">Epidemiology</a> and the closely related field of <a href="https://en.wikipedia.org/wiki/Health_geography">Health Geography</a> using modern GIS techniques. Before we get into the the analysis, lets get some context behind why this is important.</p>
+<section id="london-cholera-outbreak" class="level3">
+<h3 class="anchored" data-anchor-id="london-cholera-outbreak">1854 London Cholera Outbreak</h3>
+<p><a href="https://en.wikipedia.org/wiki/John_Snow#Cholera">Dr.&nbsp;John Snow</a> was a physician practicing in London where cholera outbreaks were a frequent occurrence due to poor sanitation practices. Dr.&nbsp;Snow was a skeptic of the miasma theory and a proponent of germ theory.</p>
+<ul>
+<li>In 1849 he proposed cholera that it was spread by fecal contaminated water, after comparing cholera rates between London districts supplied by different water companies.</li>
+</ul>
+<p>Five years later, during an outbreak in London’s SoHo neighborhood in 1854, Dr.&nbsp;Snow was able to identify the point source of the outbreak using a hand-sketched map.</p>
+<ul>
+<li>He recorded each case of cholera in the area using a dash, and recorded each water pump with a circled dot, creating what today would be called a <strong>dot map</strong>.
+<ul>
+<li>By recording clusters of disease, and conducting interviews, Snow was able to trace most cases of the outbreak to a single water pump, located on Broad st.</li>
+</ul></li>
+</ul>
+<p>Using his map, Dr.&nbsp;Snow was able to convince the local council to remove the pump handle and the outbreak subsided.</p>
+<ul>
+<li>Despite this, the medical community in London continued to reject the idea that Cholera was caused by fecal contamination for another twenty years.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/GEOS270/LectureSlides/main/History_of_GIS/images/Snow_Map.jpg" class="img-fluid" style="width:75.0%"></p>
+</section>
+<section id="setting-up-a-project" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-a-project">Setting up a Project</h2>
+<p>When ArcPro opens choose the Map under Blank Templates as shown below then create your new project. I’ve named mine <strong>Lab1_Project</strong> so I can easily identify it. This will be the name of the folder your project is saved in. Set the location to an appropriate workspace.</p>
+<ul>
+<li>I am working on my own computer, and my workspace workspace is “C:\2021_S1”. This is the location where the project folder will be reside. If you are working on a lab computer, you should put your project in C:.</li>
+<li>It is <strong>very important</strong> to familiarize yourself with the procedures for <a href="../../LabInfo/geogComputers.qmd#using-geography-lab-computers">saving your work</a> if you are working on a lab computer.</li>
+<li>If you are unfamiliar with the Windows operating system (OS), it might be helpful to take a few moments to learn about the differences between Windows and the OS (Mac, Linux) you are used to working with. Once you set up a new project, close ArcGIS Pro for now.</li>
+</ul>
+<p><img src="images/New_Project.png" class="img-fluid" style="width:50.0%"></p>
+<section id="geodatabases" class="level3">
+<h3 class="anchored" data-anchor-id="geodatabases">Geodatabases</h3>
+<p>By default, ArcPro creates a geodatabase with every new project. You will see one called <strong>Lab1_Project.gdb</strong> in your project folder. See the definitions below for important info about geodatabases.</p>
+<p><strong>Geodatabase</strong>: A file management structure that is unique to ESRI products. You don’t have to store your data in a geodatabase (.gdb), but they have some enhanced functionality that makes them better than regular folders in some circumstances. One helpful thing we can do in a .gdb, is create a feature dataset to store our census data.</p>
+<p><strong>Feature Dataset</strong>: A collections of feature classes that are all in the same coordinate system. When you add a data to a feature dataset, it will <em>automatically</em> be projected into the coordinate system we specify. This can help us avoid making mistakes like working with data that is in the wrong coordinate system!</p>
+<p><strong>Feature Class</strong>: A vector data layer stored in a geodatabase. Its a special file type created by ESRI to store data effectively within ArcGIS Pro. When vector data layers are not stored in a geodatabase, they are stored in other formats, such as shapefiles or geojsons.</p>
+</section>
+<section id="download-data" class="level3">
+<h3 class="anchored" data-anchor-id="download-data">Download Data</h3>
+<p>Lets download the data we need and put it in the Lab1_Project folder you just created. Click the <a href="https://github.com/GEOS270/LabData/raw/main/CholeraOutbreak_1854.gdb.zip">download</a> link. If a pop up appears, choose save, the file will be saved in the downloads folder.</p>
+</section>
+<section id="extract-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="extract-the-data">Extract the Data</h3>
+<p>Open the windows file explorer (folder on bottom ribbon or search the start menu). Navigate to the downloads folder. You will see a folder called “CholeraOutbreak_1854.gdb”, note the type “Compressed (zipped) Folder” and size 11709 KB. Right click on the CholeraOutbreak_1854.gdb, choose a zip file manager, and select “Extract files”.</p>
+<ul>
+<li>Zip files (.zip) are a method for compressing data so it can be stored and transfered more efficiently. However, to work with the data, we have to extract it.</li>
+<li>On my computer, the 7-Zip is the .zip file manager. If you are working on the geography department computers, you can uses PeaZip instead. The specific options might differ, but the general principal is the same.</li>
+</ul>
+<p><img src="images/Extract.png" class="img-fluid" style="width:75.0%"></p>
+</section>
+<section id="save-it-to-your-project-folder" class="level3">
+<h3 class="anchored" data-anchor-id="save-it-to-your-project-folder">Save it to your Project Folder!</h3>
+<p>In the pop up window, set your Lab1_Project folder as the Extract to location.</p>
+<ul>
+<li>The lab data is now downloaded and stored in your project folder.</li>
+</ul>
+<p><img src="images/Unzip.png" class="img-fluid" style="width:75.0%"></p>
+</section>
+</section>
+<section id="working-with-historical-data" class="level2">
+<h2 class="anchored" data-anchor-id="working-with-historical-data">Working with Historical Data</h2>
+<p>We are going to be working with the hand drawn cholera map created by Dr.&nbsp;Snow showing cholera cases in SoHo. I’ve gone thought most of the steps of extracting the data for you already. This section walks you through the process of how it is typically done.</p>
+<section id="georeferencing" class="level3">
+<h3 class="anchored" data-anchor-id="georeferencing">Georeferencing</h3>
+<p>In order to get a historical map into a GIS, it has to be scanned and then <a href="https://pro.arcgis.com/en/pro-app/latest/help/data/imagery/overview-of-georeferencing.htm">georeferenced</a>. To georeference a map like, locations on the scanned image (eg. intersections) can be matched up to known reference points.</p>
+<ul>
+<li>With enough matching points (&gt;=3), an accurate transformation can be calculated and the paper map can be referenced to the proper location. I’ve done this for you to save some time.</li>
+<li>Watch the video linked below for a quick overview of georeferencing.</li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n4WeaU2bYoI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+<p>Once a map has been georeferenced, we can extract information from it. On Dr.&nbsp;Snow’s map, the key pieces of information are the cholera deaths and water pumps. To get this information into the GIS, the points have to be manually identified and entered. This process is known as digitizing, and was explained in the <a href="https://pro.arcgis.com/en/pro-app/latest/get-started/create-points-on-a-map.htm">Create points on a map</a> video. We’ll get some practice digitizing in a bit.</p>
+</section>
+</section>
+<section id="adding-a-feature-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="adding-a-feature-dataset">Adding a Feature Dataset</h2>
+<p>The cholera deaths have already been digitized. Follow the steps as outlined and refer to the video below to add the Deaths data to the map.</p>
+<ol type="1">
+<li>Open the catalog pane and navigate to your Lab1_Project.</li>
+</ol>
+<ul>
+<li><strong>Note</strong> This is what I named my project, your project may have a different name depending on how you set things up in the Getting Started step on the Introduction tab.</li>
+<li>ArcGIS Pro shows your project folder by default in the Folders tab in the Catalog pane on the right. To view other folders, you have to add folder connections. We’ll cover this later in the semester.</li>
+</ul>
+<ol start="2" type="1">
+<li><p>Find the Deaths feature class, which is located in the <strong>SourcePoints</strong> Feature Dataset in the <strong>CholeraOutbreak_1854.gdb</strong>. Click and drag the deaths feature class onto the map area.</p></li>
+<li><p>Right click again and open the attribute table to explore the data a bit.</p></li>
+</ol>
+<ul>
+<li>You can double click count to sort in ascending/descending order.</li>
+<li>Click a row to select a specific feature (eg. identify location with most deaths).</li>
+</ul>
+<p><video src="videos/AddData.mp4" class="img-fluid" style="width:75.0%" controls=""><a href="videos/AddData.mp4">Video</a></video></p>
+<section id="inspect-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="inspect-the-data">Inspect the Data</h3>
+<p>Right click “COUNT” in the attribute table and choose “Statistics” as shown below. A chart window and a properties pane will open. Use the statistics in the properties pane to answer the question.</p>
+<p><img src="images/Statistics.png" class="img-fluid" style="width:75.0%"></p>
+</section>
+</section>
+<section id="creating-a-new-feature-dataset" class="level2">
+<h2 class="anchored" data-anchor-id="creating-a-new-feature-dataset">Creating a New Feature Dataset</h2>
+<p>Using the steps outlined in the video on creating point features, we are going to create a new feature class called “Broad St.&nbsp;Pump” and digitize the location of the pump. Follow the steps as outlined and refer to the video below.</p>
+<ol type="1">
+<li><p>Right click on SourcePoints in the catalog pane and click New &gt; Feature Class.</p></li>
+<li><p>In the new window that opens, give the new feature a name and alias, set the type to point, and click Next.</p></li>
+</ol>
+<ul>
+<li>Arc Pro does not allow Feature Classes to have certain characters (eg. spaces) in file names. But you can set the alias to display spaces</li>
+<li>Feature classes can take multiple different types. The three most common, which we will mainly be concerned with are: Points, Lines, and Polygons
+<ul>
+<li>We’ll discuss the differences in detail in lecture</li>
+</ul></li>
+</ul>
+<ol start="3" type="1">
+<li>Add a new field called Name with type text then click Next.</li>
+</ol>
+<ul>
+<li>Fields allow us to store information about the features in a table. In this case, the only information we want to store is the name. We will encounter circumstances later where we store many attributes for each feature.</li>
+</ul>
+<ol start="4" type="1">
+<li>Note the Spatial Reference System then click Finish.</li>
+</ol>
+<ul>
+<li>Feature Datasets require that all feature classes within them have the same Spatial Reference System, so the projection is automatically set to that of the SourcePoints feature dataset (WGS 1984 Web Mercator)
+<ul>
+<li>If you aren’t working in a preexisting feature dataset, this would be your chance to specify it</li>
+</ul></li>
+<li>We don’t need to concern ourselves with the options on the next three pages for now.</li>
+</ul>
+<p><video src="videos/NewPoint.mp4" class="img-fluid" style="width:75.0%" controls=""><a href="videos/NewPoint.mp4">Video</a></video></p>
+<section id="digitizing-a-point" class="level3">
+<h3 class="anchored" data-anchor-id="digitizing-a-point">Digitizing a Point</h3>
+<p>Now we are going to digitize the location of the Broad St.&nbsp;Pump. Follow the steps as outlined and refer to the video below.</p>
+<ol type="1">
+<li><p>Find the Snow_cholera_map in the CholeraOutbreak_1854.gdb, click and drag it onto the map.</p></li>
+<li><p>Open the Edit tab and click Create, in the create pane that appears, click Broad St.&nbsp;Pump and choose point from the options that appear.</p></li>
+</ol>
+<ul>
+<li>The edit tab allows us to create, modify, save, and delete data among other things</li>
+<li>Create is used specifically to add new features to an existing feature data set.
+<ul>
+<li>Right now we’re creating a single point feature. We’ll learn how to digitize lines and polygons later on in the semester.</li>
+</ul></li>
+</ul>
+<ol start="3" type="1">
+<li>Click on the location of the Broad St.&nbsp;pump as shown on Dr.&nbsp;Snow’s original map, then save your edits.</li>
+</ol>
+<ul>
+<li>Zoom into the Broad St.&nbsp;area on the map, click on the location of the pump to add a point feature.
+<ul>
+<li>If you make a mistake, you can hit ctrl + z to undo your additions</li>
+<li><strong>Note</strong> Snapping is sometimes set to on by default. It will cause the cursor to jump to the nearest feature in another layer (eg. Deaths). It is useful in some situations, but not here. It can be turned off by clicking snapping in the Edit tab.</li>
+</ul></li>
+<li>Save your edits after every change to make them permanent.</li>
+</ul>
+<ol start="4" type="1">
+<li>Open the attribute table and name the newly created feature “Broad St.&nbsp;Pump”</li>
+</ol>
+<ul>
+<li>You can type directly into the attribute table to edit the newly created features Name value, which is blank for now.</li>
+<li>Clicking a new row in the attribute table will add and “empty” feature with no spatial component.
+<ul>
+<li>You can right click on a row to delete that feature</li>
+</ul></li>
+<li>Save your edits to make them permanent.</li>
+</ul>
+<p><video src="videos/Digitize.mp4" class="img-fluid" style="width:75.0%" controls=""><a href="videos/Digitize.mp4">Video</a></video></p>
+</section>
+<section id="save-your-project." class="level3">
+<h3 class="anchored" data-anchor-id="save-your-project.">Save your project.</h3>
+<p>Click Save in the top left of the Arc Pro window. ArcPro will auto save for you every so often, but its good practice to get in the habit of saving everything regularly anyway just incise.</p>
+</section>
+</section>
+<section id="adjusting-symbology" class="level2">
+<h2 class="anchored" data-anchor-id="adjusting-symbology">Adjusting Symbology</h2>
+<p>Now we are going to change the symbology of the Deaths and Broad St.&nbsp;Pump so that they are more visible. Follow the steps as outlined and refer to the video below.</p>
+<ol type="1">
+<li>Click on Deaths then click the Appearance tab, choose Single Symbol from the Symbology drop down.</li>
+</ol>
+<ul>
+<li>The appearance tab let’s you make changes to the way data is represented on your map.</li>
+</ul>
+<ol start="2" type="1">
+<li>In the symbology pane that opens, under gallery, choose the red triangle, then adjust the properties to fine tune the symbology. Select the Broad St.&nbsp;Pump and symbolize the it as a larger circle marker in a different color.</li>
+</ol>
+<ul>
+<li>You can change various properties of the point symbols to make them easier to see (eg. outline width, point size).</li>
+<li>Size, color, and shape all convey meaning. We’ll discuss the various implications of symbology later in the semester.</li>
+</ul>
+<p><video src="videos/ChangeSymbology.mp4" class="img-fluid" style="width:75.0%" controls=""><a href="videos/ChangeSymbology.mp4">Video</a></video></p>
+<section id="adding-labels" class="level3">
+<h3 class="anchored" data-anchor-id="adding-labels">Adding Labels</h3>
+<p>Now we are going to add a label to Broad St.&nbsp;Pump so the map reader can identify it. Follow the steps as outlined and refer to the video below.</p>
+<ol type="1">
+<li>Right click on Broad St.&nbsp;Pump and click Label.</li>
+</ol>
+<ul>
+<li>Note a label appears next to the point but it isn’t very easy to read.</li>
+</ul>
+<ol start="2" type="1">
+<li>Right click on Broad St.&nbsp;Pump again and click Labeling Properties, change the font size and add a halo to make the label easier to read.</li>
+</ol>
+<ul>
+<li>Halos can make your text stand out against a background. Increasing the font size also helps the text stand out.</li>
+<li>You can change many other aspects of the label text. Play around with the properties to see what happens when you make changes. Hit apply after each change.</li>
+</ul>
+<p><video src="videos/Labels.mp4" class="img-fluid" style="width:75.0%" controls=""><a href="videos/Labels.mp4">Video</a></video></p>
+</section>
+<section id="symbolize-by-count" class="level3">
+<h3 class="anchored" data-anchor-id="symbolize-by-count">Symbolize by Count</h3>
+<p>Lets adjust the symbology so the Deaths feature class points are scaled by the number of deaths at each address. Follow the steps as outlined and refer to the video below.</p>
+<ol type="1">
+<li>Click on Deaths and navigate to symbology. Select graduated symbols from the drop down.</li>
+</ol>
+<ul>
+<li>Graduated point symbols are sized differently to convey magnitude/intensity.</li>
+</ul>
+<ol start="2" type="1">
+<li>Play around with the symbology options.</li>
+</ol>
+<ul>
+<li>Clicking template allows you to select a the point marker type.</li>
+<li>The Size and Classes allow you to decide how many classes and how small-large the points should be.</li>
+<li>The Class tab allows you to specify class breaks manually.</li>
+</ul>
+<p><video src="videos/Graduated.mp4" class="img-fluid" style="width:75.0%" controls=""><a href="videos/Graduated.mp4">Video</a></video></p>
+</section>
+<section id="save-your-project.-1" class="level3">
+<h3 class="anchored" data-anchor-id="save-your-project.-1">Save your project.</h3>
+<p>Click Save in the top left of the Arc Pro window.</p>
+</section>
+</section>
+<section id="spatial-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="spatial-analysis">Spatial Analysis</h2>
+<p>We already know the Broad St.&nbsp;pump was the source of the outbreak, but lets explore a couple analysis techniques we could use to identify the source of an outbreak.</p>
+<section id="measures-of-central-tendency" class="level3">
+<h3 class="anchored" data-anchor-id="measures-of-central-tendency">Measures of Central Tendency</h3>
+<p>There are numerous ways to analyze the spatial distribution of a dataset. The <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-statistics/mean-center.htm">Mean Center</a> and <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-statistics/directional-distribution.htm">Directional Distribution</a> are two of the simplest measures. Mean center gives you a single point around which the directional distribution creates an ellipse to show directional trends in the data. <strong>Don’t</strong> calculate these statistics, just skim the linked pages and look at the example below to understand what these methods do.</p>
+<ul>
+<li>They can be weighted (eg. by the number of deaths per address).</li>
+<li>These measures roughly identify the Broad St.&nbsp;Pump as the source of the outbreak, as shown in the figure below.
+<ul>
+<li>However, they are rudimentary metrics at best. They could be used to identify multiple point sources for example.</li>
+</ul></li>
+</ul>
+<p><img src="images/Distribution.png" class="img-fluid" style="width:75.0%"></p>
+</section>
+<section id="kernel-density" class="level3">
+<h3 class="anchored" data-anchor-id="kernel-density">Kernel Density</h3>
+<p>A more advanced method is <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/kernel-density.htm">Kernel Density</a>, which gives you a magnitude (eg. number of deaths) per unit area (eg. hectare). Follow the steps as outlined and refer to the video below to calculate the Kernel Density of cholera deaths in Soho.</p>
+<ol type="1">
+<li>Click the Analysis tab and select Tools. In the Geoprocessing pane, search for and open the Kernel Density tool.</li>
+</ol>
+<ul>
+<li>The Geoprocessing pane is where you can find all the different spatial analysis tools in ArcGIS Pro.</li>
+</ul>
+<ol start="2" type="1">
+<li>Set Deaths as the input and COUNT as the Population Field.</li>
+</ol>
+<ul>
+<li>The population field weights the calculations by the number of deaths at each address.</li>
+</ul>
+<ol start="3" type="1">
+<li>Rerun the analysis multiple times, playing around with different Output cell sizes and Area units. When you are done exploring the effects of cell size and units, calculate the Kernel Density with a cell size of 5 and unit of Hectares.</li>
+</ol>
+<ul>
+<li>A Hectare is 10,000 m<sup>2</sup>, or about the area a small city block.</li>
+</ul>
+<p><video src="videos/KD.mp4" class="img-fluid" style="width:75.0%" controls=""><a href="videos/KD.mp4">Video</a></video></p>
+</section>
+<section id="save-your-project.-2" class="level3">
+<h3 class="anchored" data-anchor-id="save-your-project.-2">Save your project.</h3>
+<p>Click Save in the top left of the Arc Pro window.</p>
+</section>
+</section>
+<section id="making-a-map" class="level2">
+<h2 class="anchored" data-anchor-id="making-a-map">Making a Map</h2>
+<p>Now that you’ve used kernel density to identify the location of the pump, we’ll make our first map using a layout and add all the necessary map elements.</p>
+<section id="creating-a-layout" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-layout">Creating a Layout</h3>
+<p>Follow the steps as outlined and refer to the video below to add a new layout.</p>
+<ul>
+<li>Click the Insert tab and select Layout. Choose an appropriate page size. <em>Letter size is good for most maps in this class, only use the bigger ones if you are making a poster.</em></li>
+</ul>
+<p><video src="videos/AddLayout.mp4" class="img-fluid" style="width:75.0%" controls=""><a href="videos/AddLayout.mp4">Video</a></video></p>
+</section>
+</section>
+<section id="adding-map-elements" class="level2">
+<h2 class="anchored" data-anchor-id="adding-map-elements">Adding Map Elements</h2>
+<p>Follow the steps as outlined and refer to the video below to add the necessary map elements. These map elements should be present on each map you make for the class unless otherwise specified.</p>
+<section id="legend" class="level3">
+<h3 class="anchored" data-anchor-id="legend">Legend</h3>
+<p>Add a legend. Remove any unwanted items from the legend using the check boxes. Change the symbology of Kernel Density to 5 classes so it fits on the legend better and edit the layer name to make it more clear. Reorder the legend items if desired. * Legends items have many different settings we can fine tune. For now, we’ll just change a few. * You can add/remove &amp; reorder legend items using the check box on the right. * Changing the number of classes in the Kernel Density layer makes it fit better. * Slowly double clicking on an item in the table of contents on the left allows you to edit the text. You can change layer names so they make more sense.</p>
+</section>
+<section id="title" class="level3">
+<h3 class="anchored" data-anchor-id="title">Title</h3>
+<p>Add a a title using the Straight Text (see video). Give your map an appropriate title and font size.</p>
+<ul>
+<li>Titles should be concise and descriptive.</li>
+<li>They should be the largest font element on the map</li>
+</ul>
+</section>
+<section id="source-statement" class="level3">
+<h3 class="anchored" data-anchor-id="source-statement">Source Statement</h3>
+<p>Use the same procedure to add a data source, creator name, and date to the map.</p>
+<ul>
+<li>It is important to credit data sources.</li>
+<li>List yourself as the creator.</li>
+<li>Add a date so the reader knows when the map was created.</li>
+<li>The credit text can be smaller and “tucked away” at the bottom of the map.</li>
+</ul>
+</section>
+<section id="scale-bar-and-north-arrow" class="level3">
+<h3 class="anchored" data-anchor-id="scale-bar-and-north-arrow">Scale Bar and North Arrow</h3>
+<p>Add a north arrow &amp; scale bar</p>
+<ul>
+<li>Make sure your units are in metric!</li>
+</ul>
+<p><video src="videos/MapElements.mp4" class="img-fluid" style="width:75.0%" controls=""><a href="videos/MapElements.mp4">Video</a></video></p>
+</section>
+</section>
+<section id="export-your-map-1" class="level2">
+<h2 class="anchored" data-anchor-id="export-your-map-1">Export Your Map</h2>
+<p>Save the layout as a .pdf, name it <strong>Kernel_Density.pdf</strong>. You will upload it to canvas.</p>
+<ul>
+<li>Your map should look something like the map shown below. Different colors, element sizes, etc. are fine. But it should have all the map elements listed above.</li>
+</ul>
+<p><img src="images/Final_Map.png" class="img-fluid" style="width:75.0%"></p>
+<section id="save-your-project.-3" class="level3">
+<h3 class="anchored" data-anchor-id="save-your-project.-3">Save your project.</h3>
+<p>Click Save in the top left of the Arc Pro window.</p>
+<ul>
+<li>If you are working on a Geography Department Lab computer, make sure to save your work the the H:/ drive and log off properly. See the video of on the Lab Details page on canvas for a more detailed explanation.</li>
+</ul>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

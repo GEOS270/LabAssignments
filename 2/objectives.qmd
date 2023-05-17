@@ -1,0 +1,27 @@
+---
+title: "Coordinate Reference Systems"
+format: html
+echo: false
+---
+
+{{< var Lab.assignments.quizLink >}}
+
+{{< var Lab.assignments.instructions >}}
+
+* {{< var Lab.assignments.videoNote >}}
+
+# Overview
+
+This lab will help you understand coordinate systems and map projections.  It is also broken into two parts.  
+
+**First** you will work through a tutorial on map projections to learn how to work with projections in ArcGIS Pro
+
+* Complete the four exercises and answer a series of questions relating to content in each exercise.
+
+**Then** Make a visual comparison of four different coordinate systems that can be used to represent the Canada.
+
+* Submit a map and answer an essay question.
+
+## Warning
+
+{{< var Lab.assignments.saving >}}

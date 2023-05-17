@@ -1,0 +1,53 @@
+project:
+  type: website
+
+website:
+  title: "GEOS 270 Labs"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: labs.qmd
+        text: Lab Assignments
+    right:
+      - icon: github
+        href: https://github.com/GEOS270
+        aria-label: Quarto GitHub
+    
+  sidebar:
+    - title: "Home"
+      style: "docked"
+      background: light
+      collapse-level: 1
+      contents:
+      - index.qmd
+      - section: "Lab Info"
+        href: LabInfo/labInfo.qmd
+        contents:
+        - LabInfo/softwareAccess.qmd
+        - LabInfo/geogComputers.qmd
+        
+    - title: "Lab Assignments"
+      style: "docked"
+      background: light
+      contents:
+      - labs.qmd
+      - section: "Lab 1"
+        href: 1/objectives.qmd
+        contents:
+        - 1/instructions.qmd
+        - 1/questions.qmd
+        
+      - section: "Lab 2"
+        href: 2/objectives.qmd
+        contents:
+        - 2/instructions.qmd
+        - 2/questions.qmd
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

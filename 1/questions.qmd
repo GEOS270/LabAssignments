@@ -1,0 +1,90 @@
+---
+title: "Lab Assignment Questions"
+format: html
+echo: false
+---
+
+
+{{< var Lab.assignments.quizInfo >}}
+
+# Rubric
+
+{{< var Lab.assignments.rubricInfo >}}
+
+```{r include=FALSE}
+
+library(knitr)
+```
+
+```{r}
+#| label: tbl-schedule
+#| tbl-cap: "Lab Quiz Rubric"
+#| tbl-colwidths: [10,35,35,10]
+
+rubric <- read.csv(file = '../sheets/Rubric.csv',sep='|')
+kable(rubric, col.names = gsub("[.]", " ", names(rubric)))
+
+```
+
+# Quiz Questions
+
+## Part 1
+
+(@) Upload your *Central_Wellington_Layout.pdf*. [**Hint**](instructions.qmd#make-your-first-map)
+
+
+(@) What does the select layer by attributes tool do? [**Hint**](instructions.qmd#explore-your-data)
+
+- Find features that meet specific criteria.
+- Find features that are in a specific area.
+- Find features based on their spatial relationship to other features.
+
+(@) A ______ in ArcGIS Pro is a way to put a map on a page and map elements like a north arrow, legend, scale bar, and extent indicator. [**Hint**](instructions.qmd#make-a-layout)
+
+- Map frame
+- Layout
+- Data view
+- Geoprocessing pane
+
+
+(@) What tool was used to create the 1500 meter zone around the campsites? [**Hint**](instructions.qmd#use-geoprocessing-tools)
+
+- Select by location
+- Buffer
+- Intersect
+- Select by attribute
+
+(@) What is the first step when creating a new point layer? [**Hint**](instructions.qmd#create-points-on-a-map)
+
+- Create a polygon feature class in the project geodatabase
+- Create a raster dataset
+- Make sure you are zoomed into your area of interest. 
+- Create point feature class in the project geodatabase
+
+## Part 2
+
+(@) A ______ is a file management structure that is unique to ESRI products. [**Hint**](instructions.qmd#Geodatabases)
+
+- Folder
+- Zipfile
+- Shapefile
+- Geodatabase
+
+(@) In your own words, what does georeferencing do? [**Hint**](instructions.qmd#georeferencing)
+
+(@) How many cholera deaths were recorded in this outbreak? ______ How many locations (points) are in the dataset? ______ What is the highest number of deaths at one location? ______ [**Hint**](instructions.qmd#inspect-the-data)
+
+(@) ______ point symbols are sized differently to convey magnitude/intensity. [**Hint**](instructions.qmd#symbolize-by-count)
+
+- Triangular
+- Sequential
+- Graduated
+- Bigger
+
+
+(@) What do the mean center and directional distribution tell us about a set of points? [**Hint**](instructions.qmd#measures-of-central-tendency)
+
+(@) Why might Kernel Density be more useful for identifying the source of a source(s) of a cholera outbreak outbreak than the mean center and directional distribution? [**Hint**](instructions.qmd#kernel-density)
+
+
+(@) Upload your *Kernel_Density.pdf*. [**Hint**](instructions.qmd#kernel-density)

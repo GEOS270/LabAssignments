@@ -1,0 +1,29 @@
+---
+title: "Introduction to ArcGIS Pro"
+format: html
+echo: false
+---
+
+{{< var Lab.assignments.quizLink >}}
+
+{{< var Lab.assignments.instructions >}}
+
+* {{< var Lab.assignments.videoNote >}}
+
+# Overview
+
+This lab will help you get your bearings working with ArcGIS Pro.  It is broken into two parts.  
+
+**First** you will work through some tutorial materials put together by ESRI to gain some familiarity with using ArcGIS Pro.  
+
+* You will complete the ArcGIS Pro Tutorial to make your first map!  
+* Then watch a few videos to gain familiarity with some other aspects of the application.
+
+**Then** you will recreate an example from history using modern geospatial analysis methods.  Dr. John Snow was the first person to prove that Cholera was a waterborne pathogen.  He used manual surveying, a paper map, and rudimentary geospatial analysis to identify a well as the source of a Cholera out break in London.
+
+* You will apply a modern method known as [kernel density](https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/kernel-density.htm) to recreate this analysis and see if you can find the well that caused the outbreak.
+
+## Warning
+
+{{< var Lab.assignments.saving >}}
+

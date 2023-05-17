@@ -1,0 +1,55 @@
+---
+title: "Coordinate Reference Systems"
+format:  html
+echo: false
+---
+
+
+# Part 1:  Map Projections Tutorial
+
+This map [projection tutorial](https://ubc-library-rc.github.io/map-projections/content/exercises.html) was created by Maya Daurio at the UBC Research Commons.  The tutorial has four exercises.  Download the data on the exercise page then work through each exercise to get a quick overview of how to work with coordinate systems in ArcGIS Pro.
+
+## Exercise 1 What Coordinate System is my Data in?
+
+- Learn how to determine the coordinate system of a layer
+
+## Exercise 2 Projecting On-the-Fly
+
+- Learn how ArcGIS Pro handles layers with different coordinate systems
+
+## Exercise 3 Project Your Data
+
+- Change the coordinate system of your layer
+
+## Exercise 4 Calculating Population Density
+
+- See the material impact of different projections
+- Learn how to use Feature Datasets to manage projections
+- Create a field and calculate population density
+
+
+# Part 2: Comparing Coordinate Systems
+
+## Four Ways to Display Canada
+
+Create a figure showing Canada displayed using four different coordinate systems.  Your submission should look something like the figure below, you can reference the video for help setting things up.
+
+![](images/Coordinate_System_Comparison.png){width="75%"}
+
+The key components you need for full credit are:
+
+* Four maps on one sheet showing Canada displayed using the following coordinate systems:
+	* WGS 1984
+	* Web Mercator
+	* Canada Lambert Conformal Conic
+	* Canada Albers Equal Area
+* Your name & date created
+* Map scale shown in **two** ways on each map
+	* Scale text
+	* Scale bar
+* A graticule showing lines of Latitude and Longitude
+	* Use the same spacing (15 degrees) for each map
+
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-q41WmnzboQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+

@@ -1,0 +1,82 @@
+---
+title: "Lab Sessions"
+format: html
+echo: false
+---
+
+Labs assignments build on the topics covered in lecture.  They focus on GIS applications, giving you a chance to get hands on practice working with GIS software (ArcGIS Pro).  Most labs have associated videos and/or readings.  There is no textbook for the course, pdf files will be provided where applicable.  You can work through the labs in your lab section but they may also require some extra time outside of scheduled lab hours.
+
+* Labs will be formatted as open help sessions.  They are your chance to get one-on-one help from your TA and you may also use them to work collaboratively with your classmates.
+  * Lab attendance is not mandatory, but it is strongly encouraged.
+* There is course [piazza]({{< var keyInfo.piazza_link >}}) page which you can use post/answer questions about the lab materials.
+
+```{r include=FALSE}
+
+library(knitr)
+```
+
+
+```{r}
+#| label: tbl-lab-times
+#| tbl-cap: "Lab Sections"
+#| tbl-colwidths: [20,40,40]
+
+Checklist <- read.csv(file = '../sheets/LabTimes.csv',sep='|')
+kable(Checklist)
+
+```
+
+# Your TAs
+
+---
+
+:::: {.columns}
+
+:::{.column width="30%"}
+
+![](images/{{< var Lab.TA1.photo >}}){width=85%}
+
+:::
+
+::: {.column width="70%"}
+
+ |
+-----|:-----
+Name|{{< var Lab.TA1.name >}}
+Pronouns|{{< var Lab.TA1.pronouns >}}
+Email|{{< var Lab.TA1.email >}}
+Office|{{< var Lab.TA1.office >}}
+
+
+::: 
+
+::::
+
+{{< var Lab.TA1.about >}}
+
+---
+
+:::: {.columns}
+
+:::{.column width="30%"}
+
+![](images/{{< var Lab.TA2.photo >}}){width=85%}
+
+:::
+
+::: {.column width="70%"}
+
+
+ |
+-----|:-----
+Name|{{< var Lab.TA2.name >}}
+Pronouns|{{< var Lab.TA2.pronouns >}}
+Email|{{< var Lab.TA2.email >}}
+Office|{{< var Lab.TA2.office >}}
+
+::: 
+
+::::
+
+{{< var Lab.TA2.about >}}
+

@@ -1,0 +1,90 @@
+---
+title: "Lab Assignment Questions"
+format: html
+echo: false
+---
+
+
+{{< var Lab.assignments.quizInfo >}}
+
+# Rubric
+
+{{< var Lab.assignments.rubricInfo >}}
+
+```{r include=FALSE}
+
+library(knitr)
+```
+
+```{r}
+#| label: tbl-schedule
+#| tbl-cap: "Lab Quiz Rubric"
+#| tbl-colwidths: [10,35,35,10]
+
+rubric <- read.csv(file = '../sheets/Rubric.csv',sep='|')
+kable(rubric, col.names = gsub("[.]", " ", names(rubric)))
+
+```
+
+# Quiz Questions
+
+## Part 1
+
+### Exercise 1
+
+(@) Metadata is _____ about ____. [**Hint**](https://ubc-library-rc.github.io/map-projections/content/exercise1-discover-coord.html#inspecting-the-metadata)
+
+### Exercise 2
+
+(@) In your own words, what does Project “On the Fly” do? [**Hint**](https://ubc-library-rc.github.io/map-projections/content/exercise2-transform.html#exercise-2-projecting-on-the-fly)
+
+(@) What UTM zone is Vancouver in?. [**Hint**](https://ubc-library-rc.github.io/map-projections/content/exercise3-project.html#exercise-3-project-your-data)
+
+* 10 S
+* 11 N
+* 10 N
+* 18 N
+
+
+### Exercise 3
+
+(@) Use the [What UTM Zone am I in?](https://mangomap.com/robertyoung/maps/69585/what-utm-zone-am-i-in-#) tool match find the UTM zones for these cities:
+
+- Inuvik, NWT, Canada
+- Cape Town, South Africa
+- Kyoto, Japan
+
+
+### Exercise 4
+
+(@) What spatial unit is the Shape_Area of the CAN_albersEA in? (Check the Spatial Reference Info). [**Hint**](https://ubc-library-rc.github.io/map-projections/content/exercise4-pop-density.html#inspect-the-attribute-tables)
+
+* Kilometers
+* Meters
+* Square Miles
+* Square Kilometers
+* Square Meters
+* Degrees
+
+(@) What is the difference in Shape_Area given for the CAN_webMercator and CAN_albersEA layers in **Square Kilometers**?  Round to the nearest whole number. [**Hint**](https://ubc-library-rc.github.io/map-projections/content/exercise4-pop-density.html#inspect-the-attribute-tables)
+
+- Folder
+- Zipfile
+- Shapefile
+- Geodatabase
+
+(@) We are multiplying by 1000000 to convert the units to population per square ____. [**Hint**](https://ubc-library-rc.github.io/map-projections/content/exercise4-pop-density.html#calculating-population-density)
+
+(@) What is the population density of the **CAN_webMercator** layer? Round your answer to the nearest hundredth place. [**Hint**](https://ubc-library-rc.github.io/map-projections/content/exercise4-pop-density.html#calculating-population-density)
+
+(@) What is the population density of the **CAN_albersEA** layer? Round your answer to the nearest hundredth place. [**Hint**](https://ubc-library-rc.github.io/map-projections/content/exercise4-pop-density.html#calculating-population-density)
+
+(@) How do the calculations compare?  Which layer do you think has the most accurate Population Density and why? [**Hint**](https://ubc-library-rc.github.io/map-projections/content/exercise4-pop-density.html#calculating-population-density)
+
+
+## Part 2
+
+(@) Submit your figure showing Canada in the four different coordinate systems. [**Hint**](instructions.qmd#four-ways-to-display-canada)
+
+(@) Write a **paragraph or two** comparing and contrasting the four different coordinate systems.  What are the differences/similarities between them?  If you wanted to make a map of population totals by province, which coordinate system(s) would you choose? What if you wanted to make a map of population **density** by province, which coordinate system(s) would you choose? [**Hint**](instructions.qmd#four-ways-to-display-canada)
+

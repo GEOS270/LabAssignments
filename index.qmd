@@ -1,0 +1,5 @@
+---
+title: "Lab Assignments"
+---
+
+This site holds info for GEOS 270 Labs.

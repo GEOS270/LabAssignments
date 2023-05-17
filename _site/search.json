@@ -1,0 +1,240 @@
+[
+  {
+    "objectID": "1/instructions.html",
+    "href": "1/instructions.html",
+    "title": "Introduction to ArcGIS Pro",
+    "section": "",
+    "text": "To get familiar with ArcGIS Pro, you will complete an Introduction to ArcGIS Pro tutorial and watch a four other short videos. The tutorial will take about 25 minutes and give you a brief overview of the ArcGIS Pro. The videos illustrate other important aspects of the ArcGIS Pro software package and will take about 10-15 minutes to watch.\n\n\nIf you have purchased ArcGIS Pro, you can sign in through the UBC ArcGIS online account you created. If you are using the lab computers, and don’t already have one, create a public account:\n\nClick “Sign In” in the top right of this page\nClick “Create a public account” and follow the steps\n\nGo to the Introducing ArcGISPro tutorial. Watch the short introductory video, then work through the steps. You will be submitting a map from this tutorial for credit.\n\nYou already have a project open, so you can start with Open the project step 2 Note.\nNote, if you have trouble in “Opening the project, Step 3” for either tutorial, you can download the data for off line use instead\nWhen you get to “Explore Views, Step 7”, double click on the map title and add your name following the video below.\n\nVideo\n\n\nSave the layout as a .pdf, name it Central_Wellington_Layout.pdf. You will upload this map to canvas. To save your layout reference the image below.\n\nClick Share.\nClick Layout Export.\nSpecify the output location and name your file. Its best to use your Lab1_Project workspace so you can easily find this when its time to submit you map.\nClick Export.\n\n\n\n\n\n\nESRI offers quite a few tutorials on ArcGIS Pro. Feel free to work though them if you have time! But we’re just going to watch the overview videos from four tutorials to learn a bit more about what we can do with ArcGIS Pro. I’ve hyperlinked to each tutoral page for your reference and embeded the relevant video below each video link.\n\n\nThis tutorial shows you how you can interact with and explore data layers. You can find the tutorial instructions here or watch the video below.\n\n\n\n\n\nThis tutorial shows you how you can use map layouts to visualize data. You can find the tutorial instructions here or watch the video below.\n\n\n\n\n\nThis tutorial shows a few of the ways you can analyze geospatial data and see how different layers interact. You can find the tutorial instructions here or watch the video below.\n\n\n\n\n\nThis tutorial shows how you can create a feature class and populate it with point features. You can find the tutorial instructions here or watch the video below."
+  },
+  {
+    "objectID": "1/instructions.html#setting-up-a-project",
+    "href": "1/instructions.html#setting-up-a-project",
+    "title": "Introduction to ArcGIS Pro",
+    "section": "Setting up a Project",
+    "text": "Setting up a Project\nWhen ArcPro opens choose the Map under Blank Templates as shown below then create your new project. I’ve named mine Lab1_Project so I can easily identify it. This will be the name of the folder your project is saved in. Set the location to an appropriate workspace.\n\nI am working on my own computer, and my workspace workspace is “C:\\2021_S1”. This is the location where the project folder will be reside. If you are working on a lab computer, you should put your project in C:.\nIt is very important to familiarize yourself with the procedures for saving your work if you are working on a lab computer.\nIf you are unfamiliar with the Windows operating system (OS), it might be helpful to take a few moments to learn about the differences between Windows and the OS (Mac, Linux) you are used to working with. Once you set up a new project, close ArcGIS Pro for now.\n\n\n\nGeodatabases\nBy default, ArcPro creates a geodatabase with every new project. You will see one called Lab1_Project.gdb in your project folder. See the definitions below for important info about geodatabases.\nGeodatabase: A file management structure that is unique to ESRI products. You don’t have to store your data in a geodatabase (.gdb), but they have some enhanced functionality that makes them better than regular folders in some circumstances. One helpful thing we can do in a .gdb, is create a feature dataset to store our census data.\nFeature Dataset: A collections of feature classes that are all in the same coordinate system. When you add a data to a feature dataset, it will automatically be projected into the coordinate system we specify. This can help us avoid making mistakes like working with data that is in the wrong coordinate system!\nFeature Class: A vector data layer stored in a geodatabase. Its a special file type created by ESRI to store data effectively within ArcGIS Pro. When vector data layers are not stored in a geodatabase, they are stored in other formats, such as shapefiles or geojsons.\n\n\nDownload Data\nLets download the data we need and put it in the Lab1_Project folder you just created. Click the download link. If a pop up appears, choose save, the file will be saved in the downloads folder.\n\n\nExtract the Data\nOpen the windows file explorer (folder on bottom ribbon or search the start menu). Navigate to the downloads folder. You will see a folder called “CholeraOutbreak_1854.gdb”, note the type “Compressed (zipped) Folder” and size 11709 KB. Right click on the CholeraOutbreak_1854.gdb, choose a zip file manager, and select “Extract files”.\n\nZip files (.zip) are a method for compressing data so it can be stored and transfered more efficiently. However, to work with the data, we have to extract it.\nOn my computer, the 7-Zip is the .zip file manager. If you are working on the geography department computers, you can uses PeaZip instead. The specific options might differ, but the general principal is the same.\n\n\n\n\nSave it to your Project Folder!\nIn the pop up window, set your Lab1_Project folder as the Extract to location.\n\nThe lab data is now downloaded and stored in your project folder."
+  },
+  {
+    "objectID": "1/instructions.html#working-with-historical-data",
+    "href": "1/instructions.html#working-with-historical-data",
+    "title": "Introduction to ArcGIS Pro",
+    "section": "Working with Historical Data",
+    "text": "Working with Historical Data\nWe are going to be working with the hand drawn cholera map created by Dr. Snow showing cholera cases in SoHo. I’ve gone thought most of the steps of extracting the data for you already. This section walks you through the process of how it is typically done.\n\nGeoreferencing\nIn order to get a historical map into a GIS, it has to be scanned and then georeferenced. To georeference a map like, locations on the scanned image (eg. intersections) can be matched up to known reference points.\n\nWith enough matching points (>=3), an accurate transformation can be calculated and the paper map can be referenced to the proper location. I’ve done this for you to save some time.\nWatch the video linked below for a quick overview of georeferencing.\n\n\n\nOnce a map has been georeferenced, we can extract information from it. On Dr. Snow’s map, the key pieces of information are the cholera deaths and water pumps. To get this information into the GIS, the points have to be manually identified and entered. This process is known as digitizing, and was explained in the Create points on a map video. We’ll get some practice digitizing in a bit."
+  },
+  {
+    "objectID": "1/instructions.html#adding-a-feature-dataset",
+    "href": "1/instructions.html#adding-a-feature-dataset",
+    "title": "Introduction to ArcGIS Pro",
+    "section": "Adding a Feature Dataset",
+    "text": "Adding a Feature Dataset\nThe cholera deaths have already been digitized. Follow the steps as outlined and refer to the video below to add the Deaths data to the map.\n\nOpen the catalog pane and navigate to your Lab1_Project.\n\n\nNote This is what I named my project, your project may have a different name depending on how you set things up in the Getting Started step on the Introduction tab.\nArcGIS Pro shows your project folder by default in the Folders tab in the Catalog pane on the right. To view other folders, you have to add folder connections. We’ll cover this later in the semester.\n\n\nFind the Deaths feature class, which is located in the SourcePoints Feature Dataset in the CholeraOutbreak_1854.gdb. Click and drag the deaths feature class onto the map area.\nRight click again and open the attribute table to explore the data a bit.\n\n\nYou can double click count to sort in ascending/descending order.\nClick a row to select a specific feature (eg. identify location with most deaths).\n\nVideo\n\nInspect the Data\nRight click “COUNT” in the attribute table and choose “Statistics” as shown below. A chart window and a properties pane will open. Use the statistics in the properties pane to answer the question."
+  },
+  {
+    "objectID": "1/instructions.html#creating-a-new-feature-dataset",
+    "href": "1/instructions.html#creating-a-new-feature-dataset",
+    "title": "Introduction to ArcGIS Pro",
+    "section": "Creating a New Feature Dataset",
+    "text": "Creating a New Feature Dataset\nUsing the steps outlined in the video on creating point features, we are going to create a new feature class called “Broad St. Pump” and digitize the location of the pump. Follow the steps as outlined and refer to the video below.\n\nRight click on SourcePoints in the catalog pane and click New > Feature Class.\nIn the new window that opens, give the new feature a name and alias, set the type to point, and click Next.\n\n\nArc Pro does not allow Feature Classes to have certain characters (eg. spaces) in file names. But you can set the alias to display spaces\nFeature classes can take multiple different types. The three most common, which we will mainly be concerned with are: Points, Lines, and Polygons\n\nWe’ll discuss the differences in detail in lecture\n\n\n\nAdd a new field called Name with type text then click Next.\n\n\nFields allow us to store information about the features in a table. In this case, the only information we want to store is the name. We will encounter circumstances later where we store many attributes for each feature.\n\n\nNote the Spatial Reference System then click Finish.\n\n\nFeature Datasets require that all feature classes within them have the same Spatial Reference System, so the projection is automatically set to that of the SourcePoints feature dataset (WGS 1984 Web Mercator)\n\nIf you aren’t working in a preexisting feature dataset, this would be your chance to specify it\n\nWe don’t need to concern ourselves with the options on the next three pages for now.\n\nVideo\n\nDigitizing a Point\nNow we are going to digitize the location of the Broad St. Pump. Follow the steps as outlined and refer to the video below.\n\nFind the Snow_cholera_map in the CholeraOutbreak_1854.gdb, click and drag it onto the map.\nOpen the Edit tab and click Create, in the create pane that appears, click Broad St. Pump and choose point from the options that appear.\n\n\nThe edit tab allows us to create, modify, save, and delete data among other things\nCreate is used specifically to add new features to an existing feature data set.\n\nRight now we’re creating a single point feature. We’ll learn how to digitize lines and polygons later on in the semester.\n\n\n\nClick on the location of the Broad St. pump as shown on Dr. Snow’s original map, then save your edits.\n\n\nZoom into the Broad St. area on the map, click on the location of the pump to add a point feature.\n\nIf you make a mistake, you can hit ctrl + z to undo your additions\nNote Snapping is sometimes set to on by default. It will cause the cursor to jump to the nearest feature in another layer (eg. Deaths). It is useful in some situations, but not here. It can be turned off by clicking snapping in the Edit tab.\n\nSave your edits after every change to make them permanent.\n\n\nOpen the attribute table and name the newly created feature “Broad St. Pump”\n\n\nYou can type directly into the attribute table to edit the newly created features Name value, which is blank for now.\nClicking a new row in the attribute table will add and “empty” feature with no spatial component.\n\nYou can right click on a row to delete that feature\n\nSave your edits to make them permanent.\n\nVideo\n\n\nSave your project.\nClick Save in the top left of the Arc Pro window. ArcPro will auto save for you every so often, but its good practice to get in the habit of saving everything regularly anyway just incise."
+  },
+  {
+    "objectID": "1/instructions.html#adjusting-symbology",
+    "href": "1/instructions.html#adjusting-symbology",
+    "title": "Introduction to ArcGIS Pro",
+    "section": "Adjusting Symbology",
+    "text": "Adjusting Symbology\nNow we are going to change the symbology of the Deaths and Broad St. Pump so that they are more visible. Follow the steps as outlined and refer to the video below.\n\nClick on Deaths then click the Appearance tab, choose Single Symbol from the Symbology drop down.\n\n\nThe appearance tab let’s you make changes to the way data is represented on your map.\n\n\nIn the symbology pane that opens, under gallery, choose the red triangle, then adjust the properties to fine tune the symbology. Select the Broad St. Pump and symbolize the it as a larger circle marker in a different color.\n\n\nYou can change various properties of the point symbols to make them easier to see (eg. outline width, point size).\nSize, color, and shape all convey meaning. We’ll discuss the various implications of symbology later in the semester.\n\nVideo\n\nAdding Labels\nNow we are going to add a label to Broad St. Pump so the map reader can identify it. Follow the steps as outlined and refer to the video below.\n\nRight click on Broad St. Pump and click Label.\n\n\nNote a label appears next to the point but it isn’t very easy to read.\n\n\nRight click on Broad St. Pump again and click Labeling Properties, change the font size and add a halo to make the label easier to read.\n\n\nHalos can make your text stand out against a background. Increasing the font size also helps the text stand out.\nYou can change many other aspects of the label text. Play around with the properties to see what happens when you make changes. Hit apply after each change.\n\nVideo\n\n\nSymbolize by Count\nLets adjust the symbology so the Deaths feature class points are scaled by the number of deaths at each address. Follow the steps as outlined and refer to the video below.\n\nClick on Deaths and navigate to symbology. Select graduated symbols from the drop down.\n\n\nGraduated point symbols are sized differently to convey magnitude/intensity.\n\n\nPlay around with the symbology options.\n\n\nClicking template allows you to select a the point marker type.\nThe Size and Classes allow you to decide how many classes and how small-large the points should be.\nThe Class tab allows you to specify class breaks manually.\n\nVideo\n\n\nSave your project.\nClick Save in the top left of the Arc Pro window."
+  },
+  {
+    "objectID": "1/instructions.html#spatial-analysis",
+    "href": "1/instructions.html#spatial-analysis",
+    "title": "Introduction to ArcGIS Pro",
+    "section": "Spatial Analysis",
+    "text": "Spatial Analysis\nWe already know the Broad St. pump was the source of the outbreak, but lets explore a couple analysis techniques we could use to identify the source of an outbreak.\n\nMeasures of Central Tendency\nThere are numerous ways to analyze the spatial distribution of a dataset. The Mean Center and Directional Distribution are two of the simplest measures. Mean center gives you a single point around which the directional distribution creates an ellipse to show directional trends in the data. Don’t calculate these statistics, just skim the linked pages and look at the example below to understand what these methods do.\n\nThey can be weighted (eg. by the number of deaths per address).\nThese measures roughly identify the Broad St. Pump as the source of the outbreak, as shown in the figure below.\n\nHowever, they are rudimentary metrics at best. They could be used to identify multiple point sources for example.\n\n\n\n\n\nKernel Density\nA more advanced method is Kernel Density, which gives you a magnitude (eg. number of deaths) per unit area (eg. hectare). Follow the steps as outlined and refer to the video below to calculate the Kernel Density of cholera deaths in Soho.\n\nClick the Analysis tab and select Tools. In the Geoprocessing pane, search for and open the Kernel Density tool.\n\n\nThe Geoprocessing pane is where you can find all the different spatial analysis tools in ArcGIS Pro.\n\n\nSet Deaths as the input and COUNT as the Population Field.\n\n\nThe population field weights the calculations by the number of deaths at each address.\n\n\nRerun the analysis multiple times, playing around with different Output cell sizes and Area units. When you are done exploring the effects of cell size and units, calculate the Kernel Density with a cell size of 5 and unit of Hectares.\n\n\nA Hectare is 10,000 m2, or about the area a small city block.\n\nVideo\n\n\nSave your project.\nClick Save in the top left of the Arc Pro window."
+  },
+  {
+    "objectID": "1/instructions.html#making-a-map",
+    "href": "1/instructions.html#making-a-map",
+    "title": "Introduction to ArcGIS Pro",
+    "section": "Making a Map",
+    "text": "Making a Map\nNow that you’ve used kernel density to identify the location of the pump, we’ll make our first map using a layout and add all the necessary map elements.\n\nCreating a Layout\nFollow the steps as outlined and refer to the video below to add a new layout.\n\nClick the Insert tab and select Layout. Choose an appropriate page size. Letter size is good for most maps in this class, only use the bigger ones if you are making a poster.\n\nVideo"
+  },
+  {
+    "objectID": "1/instructions.html#adding-map-elements",
+    "href": "1/instructions.html#adding-map-elements",
+    "title": "Introduction to ArcGIS Pro",
+    "section": "Adding Map Elements",
+    "text": "Adding Map Elements\nFollow the steps as outlined and refer to the video below to add the necessary map elements. These map elements should be present on each map you make for the class unless otherwise specified.\n\nLegend\nAdd a legend. Remove any unwanted items from the legend using the check boxes. Change the symbology of Kernel Density to 5 classes so it fits on the legend better and edit the layer name to make it more clear. Reorder the legend items if desired. * Legends items have many different settings we can fine tune. For now, we’ll just change a few. * You can add/remove & reorder legend items using the check box on the right. * Changing the number of classes in the Kernel Density layer makes it fit better. * Slowly double clicking on an item in the table of contents on the left allows you to edit the text. You can change layer names so they make more sense.\n\n\nTitle\nAdd a a title using the Straight Text (see video). Give your map an appropriate title and font size.\n\nTitles should be concise and descriptive.\nThey should be the largest font element on the map\n\n\n\nSource Statement\nUse the same procedure to add a data source, creator name, and date to the map.\n\nIt is important to credit data sources.\nList yourself as the creator.\nAdd a date so the reader knows when the map was created.\nThe credit text can be smaller and “tucked away” at the bottom of the map.\n\n\n\nScale Bar and North Arrow\nAdd a north arrow & scale bar\n\nMake sure your units are in metric!\n\nVideo"
+  },
+  {
+    "objectID": "1/instructions.html#export-your-map-1",
+    "href": "1/instructions.html#export-your-map-1",
+    "title": "Introduction to ArcGIS Pro",
+    "section": "Export Your Map",
+    "text": "Export Your Map\nSave the layout as a .pdf, name it Kernel_Density.pdf. You will upload it to canvas.\n\nYour map should look something like the map shown below. Different colors, element sizes, etc. are fine. But it should have all the map elements listed above.\n\n\n\nSave your project.\nClick Save in the top left of the Arc Pro window.\n\nIf you are working on a Geography Department Lab computer, make sure to save your work the the H:/ drive and log off properly. See the video of on the Lab Details page on canvas for a more detailed explanation."
+  },
+  {
+    "objectID": "1/objectives.html",
+    "href": "1/objectives.html",
+    "title": "Introduction to ArcGIS Pro",
+    "section": "",
+    "text": "Please note: The Lab Questions corresponds to this lab assignment. There are questions you need to answer in the quiz that pertain to the lab, so its a good idea to skim the quiz questions before starting the lab.\nThis page contains instructions for the lab assignment, follow them to work through the lab in ArcGIS Pro. There are links to documentation where applicable along with embedded screenshots and videos in the instructions at some steps for reference. Feel free to work with peers in your lab section and don’t hesitate to ask your TA for help!"
+  },
+  {
+    "objectID": "1/objectives.html#warning",
+    "href": "1/objectives.html#warning",
+    "title": "Introduction to ArcGIS Pro",
+    "section": "Warning",
+    "text": "Warning\nIf you are working on a geography lab computer Make Sure you are familiar with the procedures for saving your labs!"
+  },
+  {
+    "objectID": "1/questions.html",
+    "href": "1/questions.html",
+    "title": "Lab Assignment Questions",
+    "section": "",
+    "text": "You can submit your answers to this Lab Quiz questions on via the corresponding Canvas Quiz. Questions in this document are hyperlinked to relevant content incase you need help finding answers. Feel free to work with peers in the lab, but make sure all work submitted is your own. Written answers can be brief and bullet point format is okay unless otherwise specified."
+  },
+  {
+    "objectID": "1/questions.html#part-1",
+    "href": "1/questions.html#part-1",
+    "title": "Lab Assignment Questions",
+    "section": "Part 1",
+    "text": "Part 1\n\nUpload your Central_Wellington_Layout.pdf. Hint\nWhat does the select layer by attributes tool do? Hint\n\n\nFind features that meet specific criteria.\nFind features that are in a specific area.\nFind features based on their spatial relationship to other features.\n\n\nA ______ in ArcGIS Pro is a way to put a map on a page and map elements like a north arrow, legend, scale bar, and extent indicator. Hint\n\n\nMap frame\nLayout\nData view\nGeoprocessing pane\n\n\nWhat tool was used to create the 1500 meter zone around the campsites? Hint\n\n\nSelect by location\nBuffer\nIntersect\nSelect by attribute\n\n\nWhat is the first step when creating a new point layer? Hint\n\n\nCreate a polygon feature class in the project geodatabase\nCreate a raster dataset\nMake sure you are zoomed into your area of interest.\nCreate point feature class in the project geodatabase"
+  },
+  {
+    "objectID": "1/questions.html#part-2",
+    "href": "1/questions.html#part-2",
+    "title": "Lab Assignment Questions",
+    "section": "Part 2",
+    "text": "Part 2\n\nA ______ is a file management structure that is unique to ESRI products. Hint\n\n\nFolder\nZipfile\nShapefile\nGeodatabase\n\n\nIn your own words, what does georeferencing do? Hint\nHow many cholera deaths were recorded in this outbreak? ______ How many locations (points) are in the dataset? ______ What is the highest number of deaths at one location? ______ Hint\n______ point symbols are sized differently to convey magnitude/intensity. Hint\n\n\nTriangular\nSequential\nGraduated\nBigger\n\n\nWhat do the mean center and directional distribution tell us about a set of points? Hint\nWhy might Kernel Density be more useful for identifying the source of a source(s) of a cholera outbreak outbreak than the mean center and directional distribution? Hint\nUpload your Kernel_Density.pdf. Hint"
+  },
+  {
+    "objectID": "2/instructions.html",
+    "href": "2/instructions.html",
+    "title": "Coordinate Reference Systems",
+    "section": "",
+    "text": "This map projection tutorial was created by Maya Daurio at the UBC Research Commons. The tutorial has four exercises. Download the data on the exercise page then work through each exercise to get a quick overview of how to work with coordinate systems in ArcGIS Pro.\n\n\n\nLearn how to determine the coordinate system of a layer\n\n\n\n\n\nLearn how ArcGIS Pro handles layers with different coordinate systems\n\n\n\n\n\nChange the coordinate system of your layer\n\n\n\n\n\nSee the material impact of different projections\nLearn how to use Feature Datasets to manage projections\nCreate a field and calculate population density"
+  },
+  {
+    "objectID": "2/instructions.html#four-ways-to-display-canada",
+    "href": "2/instructions.html#four-ways-to-display-canada",
+    "title": "Coordinate Reference Systems",
+    "section": "Four Ways to Display Canada",
+    "text": "Four Ways to Display Canada\nCreate a figure showing Canada displayed using four different coordinate systems. Your submission should look something like the figure below, you can reference the video for help setting things up.\n\nThe key components you need for full credit are:\n\nFour maps on one sheet showing Canada displayed using the following coordinate systems:\n\nWGS 1984\nWeb Mercator\nCanada Lambert Conformal Conic\nCanada Albers Equal Area\n\nYour name & date created\nMap scale shown in two ways on each map\n\nScale text\nScale bar\n\nA graticule showing lines of Latitude and Longitude\n\nUse the same spacing (15 degrees) for each map"
+  },
+  {
+    "objectID": "2/objectives.html",
+    "href": "2/objectives.html",
+    "title": "Coordinate Reference Systems",
+    "section": "",
+    "text": "Please note: The Lab Questions corresponds to this lab assignment. There are questions you need to answer in the quiz that pertain to the lab, so its a good idea to skim the quiz questions before starting the lab.\nThis page contains instructions for the lab assignment, follow them to work through the lab in ArcGIS Pro. There are links to documentation where applicable along with embedded screenshots and videos in the instructions at some steps for reference. Feel free to work with peers in your lab section and don’t hesitate to ask your TA for help!"
+  },
+  {
+    "objectID": "2/objectives.html#warning",
+    "href": "2/objectives.html#warning",
+    "title": "Coordinate Reference Systems",
+    "section": "Warning",
+    "text": "Warning\nIf you are working on a geography lab computer Make Sure you are familiar with the procedures for saving your labs!"
+  },
+  {
+    "objectID": "2/questions.html",
+    "href": "2/questions.html",
+    "title": "Lab Assignment Questions",
+    "section": "",
+    "text": "You can submit your answers to this Lab Quiz questions on via the corresponding Canvas Quiz. Questions in this document are hyperlinked to relevant content incase you need help finding answers. Feel free to work with peers in the lab, but make sure all work submitted is your own. Written answers can be brief and bullet point format is okay unless otherwise specified."
+  },
+  {
+    "objectID": "2/questions.html#part-1",
+    "href": "2/questions.html#part-1",
+    "title": "Lab Assignment Questions",
+    "section": "Part 1",
+    "text": "Part 1\n\nExercise 1\n\nMetadata is _____ about ____. Hint\n\n\n\nExercise 2\n\nIn your own words, what does Project “On the Fly” do? Hint\nWhat UTM zone is Vancouver in?. Hint\n\n\n10 S\n11 N\n10 N\n18 N\n\n\n\nExercise 3\n\nUse the What UTM Zone am I in? tool match find the UTM zones for these cities:\n\n\nInuvik, NWT, Canada\nCape Town, South Africa\nKyoto, Japan\n\n\n\nExercise 4\n\nWhat spatial unit is the Shape_Area of the CAN_albersEA in? (Check the Spatial Reference Info). Hint\n\n\nKilometers\nMeters\nSquare Miles\nSquare Kilometers\nSquare Meters\nDegrees\n\n\nWhat is the difference in Shape_Area given for the CAN_webMercator and CAN_albersEA layers in Square Kilometers? Round to the nearest whole number. Hint\n\n\nFolder\nZipfile\nShapefile\nGeodatabase\n\n\nWe are multiplying by 1000000 to convert the units to population per square ____. Hint\nWhat is the population density of the CAN_webMercator layer? Round your answer to the nearest hundredth place. Hint\nWhat is the population density of the CAN_albersEA layer? Round your answer to the nearest hundredth place. Hint\nHow do the calculations compare? Which layer do you think has the most accurate Population Density and why? Hint"
+  },
+  {
+    "objectID": "2/questions.html#part-2",
+    "href": "2/questions.html#part-2",
+    "title": "Lab Assignment Questions",
+    "section": "Part 2",
+    "text": "Part 2\n\nSubmit your figure showing Canada in the four different coordinate systems. Hint\nWrite a paragraph or two comparing and contrasting the four different coordinate systems. What are the differences/similarities between them? If you wanted to make a map of population totals by province, which coordinate system(s) would you choose? What if you wanted to make a map of population density by province, which coordinate system(s) would you choose? Hint"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Lab Assignments",
+    "section": "",
+    "text": "This site holds info for GEOS 270 Labs."
+  },
+  {
+    "objectID": "LabInfo/geogComputers.html",
+    "href": "LabInfo/geogComputers.html",
+    "title": "Using Geography Lab Computers",
+    "section": "",
+    "text": "Using Geography Lab Computers\nThis video gives an overview of some important steps when using the lab computers.\nVideo"
+  },
+  {
+    "objectID": "LabInfo/geogComputers.html#setting-up-your-geography-lab-account",
+    "href": "LabInfo/geogComputers.html#setting-up-your-geography-lab-account",
+    "title": "Using Geography Lab Computers",
+    "section": "Setting up your Geography Lab Account",
+    "text": "Setting up your Geography Lab Account\n\nInitialize your H:/ Drive\nWhen you first logon to geography lab computers with your account find C:.bat in the file manager. Double click on it to run it. This will initialize your account and set up access to your H:/ drive."
+  },
+  {
+    "objectID": "LabInfo/geogComputers.html#work-locally",
+    "href": "LabInfo/geogComputers.html#work-locally",
+    "title": "Using Geography Lab Computers",
+    "section": "Work Locally",
+    "text": "Work Locally\nDuring your lab, you should save your work to C:/temp. This is a folder stored locally on the computer you are working on. Since it’s the same machine you’re working on, ArcGIS Pro can easily and quickly access and save files in this folder.\n\nAvoid saving files to the Desktop or Documents folders and try to empty the Downloads folder frequently. These folders are all part of your user profile which travels to/from the server when you log in/off. The more data there is in the profile the longer it will take to log in/off. We had a student with 106GB on profile and it took 45 minutes to get in!"
+  },
+  {
+    "objectID": "LabInfo/geogComputers.html#save-remotely",
+    "href": "LabInfo/geogComputers.html#save-remotely",
+    "title": "Using Geography Lab Computers",
+    "section": "Save Remotely",
+    "text": "Save Remotely\nThe C:/temp drive can accessed by multiple users. A single computer in room 115 might have 20-30 different students accessing it (in person + remotely) in a given week. Each time a new user logs on, the C:/temp folder is at risk for being overwritten.\n\nIt is EXTREMELY IMPORTANT that you save your work elsewhere before you log off. When you sign up for your Geography lab account, you will be given server space known as your H:/ drive folder; you should save your work here. To do so, follow these steps:\n\n\nSave your Map document and close ArcGIS Pro or any other software you may be using (Word, Excel, etc. …)\nLaunch My Computer, and navigate to C:/temp\nRight click on your lab folder in C:/temp and select Copy\nNavigate to H:/ and paste your lab folder here"
+  },
+  {
+    "objectID": "LabInfo/geogComputers.html#steps-for-retrieving-work-from-h",
+    "href": "LabInfo/geogComputers.html#steps-for-retrieving-work-from-h",
+    "title": "Using Geography Lab Computers",
+    "section": "Steps for Retrieving Work from H:/",
+    "text": "Steps for Retrieving Work from H:/\nWhen you come back next time to complete the assignment, you will transfer the files in the reverse direction. This is because the H:/ drive is stored on a networked server, not the local machine. ArcGIS Pro will run slowly if you try to work directly from the H:/ drive, which is why you must transfer your files first. To transfer your files:\n1 Log in\n2 Use My Computer to find **C:* and delete all the files you find there since they are likely not yours and you don’t want to get mixed up.\n3 Navigate to your H:/ drive, select your current lab’s folder , and copy it to **C:*\n4 Resume your work"
+  },
+  {
+    "objectID": "LabInfo/geogComputers.html#windows-tips-for-mac-users",
+    "href": "LabInfo/geogComputers.html#windows-tips-for-mac-users",
+    "title": "Using Geography Lab Computers",
+    "section": "Windows Tips for Mac Users",
+    "text": "Windows Tips for Mac Users\nThe geography lab computers are currently running the Windows 10 OS. Windows is quite different than the Mac OS, and for those who have little familiarity with Windows, there can be step (but short!) learning curve. Here are a few resources that Mac users might find helpful to look through before starting lab:\n\n15 Windows 10 Tips for Mac Users\n16 tips for Mac users who must use Windows"
+  },
+  {
+    "objectID": "LabInfo/labInfo.html",
+    "href": "LabInfo/labInfo.html",
+    "title": "Lab Sessions",
+    "section": "",
+    "text": "Labs assignments build on the topics covered in lecture. They focus on GIS applications, giving you a chance to get hands on practice working with GIS software (ArcGIS Pro). Most labs have associated videos and/or readings. There is no textbook for the course, pdf files will be provided where applicable. You can work through the labs in your lab section but they may also require some extra time outside of scheduled lab hours.\n\nLabs will be formatted as open help sessions. They are your chance to get one-on-one help from your TA and you may also use them to work collaboratively with your classmates.\n\nLab attendance is not mandatory, but it is strongly encouraged.\n\nThere is course piazza page which you can use post/answer questions about the lab materials.\n\n\n\n\n\nTable 1: Lab Sections\n\n\n\n\n\n\n\nSection\nTime\nLocation\n\n\n\n\nL1A\nTue & Thu, 15:00-17:00\nRoom 115\n\n\nL2A\nWed & Fri, 10:00-12:00\nHybrid Room 115 or Zoom\n\n\n\n\n\n\n\nYour TAs\n\n\n\n\n\n\n\n\nName\nZijie Chai\n\n\nPronouns\nShe/Her/Hers\n\n\nEmail\nzijie01@mail.ubc.ca\n\n\nOffice\nRoom 225, Geography Bldg.\n\n\n\n\n\nMy name is Zijie and I am a MSc student in Geography, studying the Contributions of glaciers to streamflow and how they have varied in response to climatic variability and glacier changes in Columbia River Basin. My background has mostly been focused on hydrology, a little on Hydrogeology and Biohydrology. In my free time I enjoy hiking, SUP, traveling, trying new food and watching movies!\n\n\n\n\n\n\n\n\nName\nNastaran Pournematollahi\n\n\nPronouns\nShe/Her/Hers\n\n\nEmail\nNasipour@mail.ubc.ca\n\n\nOffice\nRoom 144, Geography Bldg.\n\n\n\n\n\nMy name is Nastaran Nematolahi, and I am a second-year Ph.D. student in Geography. I am a physical geographer with a strong interest in river morphodynamics and environmental hydraulics. My research focuses on alluvial fans and the processes that operate on them. I also have a Master’s degree in Hydraulic Structures, which has given me a diverse background in the field. In my free time, I enjoy dancing and ice skating"
+  },
+  {
+    "objectID": "LabInfo/softwareAccess.html",
+    "href": "LabInfo/softwareAccess.html",
+    "title": "ArcGIS Pro Access",
+    "section": "",
+    "text": "You will be using the ArcGIS Pro software package to complete your lab assignments. This is a proprietary program (it costs money) that can only be run on the Windows operating system. There are two options for accessing the software."
+  },
+  {
+    "objectID": "LabInfo/softwareAccess.html#lab-fee",
+    "href": "LabInfo/softwareAccess.html#lab-fee",
+    "title": "ArcGIS Pro Access",
+    "section": "Lab fee",
+    "text": "Lab fee\nThere is a lab fee to use geography computers. You must pay the lab fee or you will loose access to your account. The lab fee is due by Friday June 2nd\n\nIf you have not received logon credentials, contact Jose Aparicio at: labhelp@geog.ubc.ca"
+  },
+  {
+    "objectID": "LabInfo/softwareAccess.html#remote-access",
+    "href": "LabInfo/softwareAccess.html#remote-access",
+    "title": "ArcGIS Pro Access",
+    "section": "Remote Access",
+    "text": "Remote Access\nTo remotely access lab computers, follow these instructions. Information about the Geography Computer Labs can be found here.\n\nNote the lab schedule and refrain from remotely accessing a computer while other courses are holding lab session in that room. When accessing computers remotely - try to use computers that are located in room 239 as those are less likely to result in conflicts with in-person users.\nIf you are having trouble logging on remotely try: adding “geoglab\" in front of your username."
+  },
+  {
+    "objectID": "labs.html",
+    "href": "labs.html",
+    "title": "Lab Assignments",
+    "section": "",
+    "text": "Here are the labs …"
+  }
+]
