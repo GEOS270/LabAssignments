@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GEOS 270 Labs - Coordinate Reference Systems</title>
+<title>GEOS 270 Labs - Lab Sessions</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -60,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -80,11 +80,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html">
+    <a class="nav-link active" href="../index.html" aria-current="page">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../labs.html" aria-current="page">
+    <a class="nav-link" href="../labs.html">
  <span class="menu-text">Lab Assignments</span></a>
   </li>  
 </ul>
@@ -101,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Coordinate Reference Systems</h1>
+      <h1 class="quarto-secondary-nav-title">Lab Sessions</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -116,45 +116,25 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs.html" class="sidebar-item-text sidebar-link">Lab Assignments</a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link">Home</a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../1/objectives.html" class="sidebar-item-text sidebar-link">Lab 1</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a href="../LabInfo/labInfo.html" class="sidebar-item-text sidebar-link active">Lab Info</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../1/instructions.html" class="sidebar-item-text sidebar-link">Introduction to ArcGIS Pro</a>
+  <a href="../LabInfo/softwareAccess.html" class="sidebar-item-text sidebar-link">ArcGIS Pro Access</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../1/questions.html" class="sidebar-item-text sidebar-link">Lab Assignment Questions</a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../2/objectives.html" class="sidebar-item-text sidebar-link">Lab 2</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../2/instructions.html" class="sidebar-item-text sidebar-link active">Coordinate Reference Systems</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../2/questions.html" class="sidebar-item-text sidebar-link">Lab Assignment Questions</a>
+  <a href="../LabInfo/geogComputers.html" class="sidebar-item-text sidebar-link">Using Geography Lab Computers</a>
   </div>
 </li>
       </ul>
@@ -168,17 +148,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#part-1-map-projections-tutorial" id="toc-part-1-map-projections-tutorial" class="nav-link active" data-scroll-target="#part-1-map-projections-tutorial">Part 1: Map Projections Tutorial</a>
-  <ul class="collapse">
-  <li><a href="#exercise-1-what-coordinate-system-is-my-data-in" id="toc-exercise-1-what-coordinate-system-is-my-data-in" class="nav-link" data-scroll-target="#exercise-1-what-coordinate-system-is-my-data-in">Exercise 1 What Coordinate System is my Data in?</a></li>
-  <li><a href="#exercise-2-projecting-on-the-fly" id="toc-exercise-2-projecting-on-the-fly" class="nav-link" data-scroll-target="#exercise-2-projecting-on-the-fly">Exercise 2 Projecting On-the-Fly</a></li>
-  <li><a href="#exercise-3-project-your-data" id="toc-exercise-3-project-your-data" class="nav-link" data-scroll-target="#exercise-3-project-your-data">Exercise 3 Project Your Data</a></li>
-  <li><a href="#exercise-4-calculating-population-density" id="toc-exercise-4-calculating-population-density" class="nav-link" data-scroll-target="#exercise-4-calculating-population-density">Exercise 4 Calculating Population Density</a></li>
-  </ul></li>
-  <li><a href="#part-2-comparing-coordinate-systems" id="toc-part-2-comparing-coordinate-systems" class="nav-link" data-scroll-target="#part-2-comparing-coordinate-systems">Part 2: Comparing Coordinate Systems</a>
-  <ul class="collapse">
-  <li><a href="#four-ways-to-display-canada" id="toc-four-ways-to-display-canada" class="nav-link" data-scroll-target="#four-ways-to-display-canada">Four Ways to Display Canada</a></li>
-  </ul></li>
+  <li><a href="#your-tas" id="toc-your-tas" class="nav-link active" data-scroll-target="#your-tas">Your TAs</a></li>
   </ul>
 </nav>
     </div>
@@ -187,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Coordinate Reference Systems</h1>
+<h1 class="title d-none d-lg-block">Lab Sessions</h1>
 </div>
 
 
@@ -202,67 +172,107 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="part-1-map-projections-tutorial" class="level1">
-<h1>Part 1: Map Projections Tutorial</h1>
-<p>This map <a href="https://ubc-library-rc.github.io/map-projections/content/exercises.html">projection tutorial</a> was created by Maya Daurio at the UBC Research Commons. The tutorial has four exercises. Download the data on the exercise page then work through each exercise to get a quick overview of how to work with coordinate systems in ArcGIS Pro.</p>
-<section id="exercise-1-what-coordinate-system-is-my-data-in" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-1-what-coordinate-system-is-my-data-in">Exercise 1 What Coordinate System is my Data in?</h2>
+<p>Labs assignments build on the topics covered in lecture. They focus on GIS applications, giving you a chance to get hands on practice working with GIS software (ArcGIS Pro). Most labs have associated videos and/or readings. There is no textbook for the course, pdf files will be provided where applicable. You can work through the labs in your lab section but they may also require some extra time outside of scheduled lab hours.</p>
 <ul>
-<li>Learn how to determine the coordinate system of a layer</li>
-</ul>
-</section>
-<section id="exercise-2-projecting-on-the-fly" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-2-projecting-on-the-fly">Exercise 2 Projecting On-the-Fly</h2>
+<li>Labs will be formatted as open help sessions. They are your chance to get one-on-one help from your TA and you may also use them to work collaboratively with your classmates.
 <ul>
-<li>Learn how ArcGIS Pro handles layers with different coordinate systems</li>
-</ul>
-</section>
-<section id="exercise-3-project-your-data" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-3-project-your-data">Exercise 3 Project Your Data</h2>
-<ul>
-<li>Change the coordinate system of your layer</li>
-</ul>
-</section>
-<section id="exercise-4-calculating-population-density" class="level2">
-<h2 class="anchored" data-anchor-id="exercise-4-calculating-population-density">Exercise 4 Calculating Population Density</h2>
-<ul>
-<li>See the material impact of different projections</li>
-<li>Learn how to use Feature Datasets to manage projections</li>
-<li>Create a field and calculate population density</li>
-</ul>
-</section>
-</section>
-<section id="part-2-comparing-coordinate-systems" class="level1">
-<h1>Part 2: Comparing Coordinate Systems</h1>
-<section id="four-ways-to-display-canada" class="level2">
-<h2 class="anchored" data-anchor-id="four-ways-to-display-canada">Four Ways to Display Canada</h2>
-<p>Create a figure showing Canada displayed using four different coordinate systems. Your submission should look something like the figure below, you can reference the video for help setting things up.</p>
-<p><img src="images/Coordinate_System_Comparison.png" class="img-fluid" style="width:75.0%"></p>
-<p>The key components you need for full credit are:</p>
-<ul>
-<li>Four maps on one sheet showing Canada displayed using the following coordinate systems:
-<ul>
-<li>WGS 1984</li>
-<li>Web Mercator</li>
-<li>Canada Lambert Conformal Conic</li>
-<li>Canada Albers Equal Area</li>
+<li>Lab attendance is not mandatory, but it is strongly encouraged.</li>
 </ul></li>
-<li>Your name &amp; date created</li>
-<li>Map scale shown in <strong>two</strong> ways on each map
-<ul>
-<li>Scale text</li>
-<li>Scale bar</li>
-</ul></li>
-<li>A graticule showing lines of Latitude and Longitude
-<ul>
-<li>Use the same spacing (15 degrees) for each map</li>
-</ul></li>
+<li>There is course <a href="https://piazza.com/ubc.ca/summer2023/geos270">piazza</a> page which you can use post/answer questions about the lab materials.</li>
 </ul>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/-q41WmnzboQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
-</iframe>
+<div class="cell">
+<div class="cell-output-display">
+<div id="tbl-lab-times" class="anchored">
+<table class="table table-sm table-striped">
+<caption>Table&nbsp;1: Lab Sections</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 40%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Section</th>
+<th style="text-align: left;">Time</th>
+<th style="text-align: left;">Location</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">L1A</td>
+<td style="text-align: left;">Tue &amp; Thu, 15:00-17:00</td>
+<td style="text-align: left;">Room 115</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">L2A</td>
+<td style="text-align: left;">Wed &amp; Fri, 10:00-12:00</td>
+<td style="text-align: left;">Hybrid Room 115 or <a href="https://ubc.zoom.us/j/63605592624?pwd=dEd6TExsd29RQmc2dzJ6NGVZTDN2UT09">Zoom</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<section id="your-tas" class="level1">
+<h1>Your TAs</h1>
+<hr>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img src="images/Zijie.jpg" class="img-fluid" style="width:85.0%"></p>
+</div><div class="column" style="width:70%;">
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Name</td>
+<td style="text-align: left;"><p>Zijie Chai</p></td>
+</tr>
+<tr class="even">
+<td>Pronouns</td>
+<td style="text-align: left;"><p>She/Her/Hers</p></td>
+</tr>
+<tr class="odd">
+<td>Email</td>
+<td style="text-align: left;"><p>zijie01@mail.ubc.ca</p></td>
+</tr>
+<tr class="even">
+<td>Office</td>
+<td style="text-align: left;"><p>Room 225, Geography Bldg.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>My name is Zijie and I am a MSc student in Geography, studying the Contributions of glaciers to streamflow and how they have varied in response to climatic variability and glacier changes in Columbia River Basin. My background has mostly been focused on hydrology, a little on Hydrogeology and Biohydrology. In my free time I enjoy hiking, SUP, traveling, trying new food and watching movies!</p>
+<hr>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img src="images/Nastaran.jpg" class="img-fluid" style="width:85.0%"></p>
+</div><div class="column" style="width:70%;">
+<table class="table">
+<tbody>
+<tr class="odd">
+<td>Name</td>
+<td style="text-align: left;"><p>Nastaran Pournematollahi</p></td>
+</tr>
+<tr class="even">
+<td>Pronouns</td>
+<td style="text-align: left;"><p>She/Her/Hers</p></td>
+</tr>
+<tr class="odd">
+<td>Email</td>
+<td style="text-align: left;"><p>Nasipour@mail.ubc.ca</p></td>
+</tr>
+<tr class="even">
+<td>Office</td>
+<td style="text-align: left;"><p>Room 144, Geography Bldg.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>My name is Nastaran Nematolahi, and I am a second-year Ph.D.&nbsp;student in Geography. I am a physical geographer with a strong interest in river morphodynamics and environmental hydraulics. My research focuses on alluvial fans and the processes that operate on them. I also have a Master’s degree in Hydraulic Structures, which has given me a diverse background in the field. In my free time, I enjoy dancing and ice skating</p>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

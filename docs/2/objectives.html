@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GEOS 270 Labs - Lab Assignment Questions</title>
+<title>GEOS 270 Labs - Coordinate Reference Systems</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -60,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -101,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Lab Assignment Questions</h1>
+      <h1 class="quarto-secondary-nav-title">Coordinate Reference Systems</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -141,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../2/objectives.html" class="sidebar-item-text sidebar-link">Lab 2</a>
+            <a href="../2/objectives.html" class="sidebar-item-text sidebar-link active">Lab 2</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -154,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../2/questions.html" class="sidebar-item-text sidebar-link active">Lab Assignment Questions</a>
+  <a href="../2/questions.html" class="sidebar-item-text sidebar-link">Lab Assignment Questions</a>
   </div>
 </li>
       </ul>
@@ -168,17 +168,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#rubric" id="toc-rubric" class="nav-link active" data-scroll-target="#rubric">Rubric</a></li>
-  <li><a href="#quiz-questions" id="toc-quiz-questions" class="nav-link" data-scroll-target="#quiz-questions">Quiz Questions</a>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
   <ul class="collapse">
-  <li><a href="#part-1" id="toc-part-1" class="nav-link" data-scroll-target="#part-1">Part 1</a>
-  <ul class="collapse">
-  <li><a href="#exercise-1" id="toc-exercise-1" class="nav-link" data-scroll-target="#exercise-1">Exercise 1</a></li>
-  <li><a href="#exercise-2" id="toc-exercise-2" class="nav-link" data-scroll-target="#exercise-2">Exercise 2</a></li>
-  <li><a href="#exercise-3" id="toc-exercise-3" class="nav-link" data-scroll-target="#exercise-3">Exercise 3</a></li>
-  <li><a href="#exercise-4" id="toc-exercise-4" class="nav-link" data-scroll-target="#exercise-4">Exercise 4</a></li>
-  </ul></li>
-  <li><a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">Part 2</a></li>
+  <li><a href="#warning" id="toc-warning" class="nav-link" data-scroll-target="#warning">Warning</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -188,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Lab Assignment Questions</h1>
+<h1 class="title d-none d-lg-block">Coordinate Reference Systems</h1>
 </div>
 
 
@@ -203,136 +195,25 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>You can submit your answers to this Lab Quiz questions on via the corresponding Canvas Quiz. Questions in this document are hyperlinked to relevant content incase you need help finding answers. Feel free to work with peers in the lab, but make sure all work submitted is your own. Written answers can be brief and bullet point format is okay <strong>unless otherwise specified</strong>.</p>
-<section id="rubric" class="level1">
-<h1>Rubric</h1>
-<p>Written answers and figure submissions will be evaluated using the rubric below and your TA will provide brief comments where applicable. Maps, charts, and other figure submissions will be evaluated for completeness and aesthetics. For Lab 1, as long as you can make a map with the necessary elements, you’ll get full credit! As the term progresses, figure submissions will be evaluated to a higher standard.</p>
-<div class="cell">
-<div class="cell-output-display">
-<div id="tbl-schedule" class="anchored">
-<table class="table table-sm table-striped">
-<caption>Table&nbsp;1: Lab Quiz Rubric</caption>
-<colgroup>
-<col style="width: 10%">
-<col style="width: 35%">
-<col style="width: 35%">
-<col style="width: 10%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Category</th>
-<th style="text-align: left;">Written Answers</th>
-<th style="text-align: left;">Figure Submissions</th>
-<th style="text-align: left;">Score</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Missing</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">0%</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Insufficient</td>
-<td style="text-align: left;">Missing major key points or serious logical flaws</td>
-<td style="text-align: left;">Serious errors in analysis, missing data, or major stylistic issues</td>
-<td style="text-align: left;">25%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Below Expectations</td>
-<td style="text-align: left;">Missing a few key points or minor logical flaws</td>
-<td style="text-align: left;">Minor errors in analysis or multiple stylistic issues</td>
-<td style="text-align: left;">50%</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Meets Expectations</td>
-<td style="text-align: left;">Hits key points and mostly well constructed</td>
-<td style="text-align: left;">Error free analysis, minor stylistic issue</td>
-<td style="text-align: left;">75%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Exceeds Expectations</td>
-<td style="text-align: left;">Clearly thought out, concise, and astute</td>
-<td style="text-align: left;">Error free analysis and clean, aesthetically pleasing map</td>
-<td style="text-align: left;">100%</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</section>
-<section id="quiz-questions" class="level1">
-<h1>Quiz Questions</h1>
-<section id="part-1" class="level2">
-<h2 class="anchored" data-anchor-id="part-1">Part 1</h2>
-<section id="exercise-1" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-1">Exercise 1</h3>
-<ol class="example" type="1">
-<li>Metadata is _____ about ____. <a href="https://ubc-library-rc.github.io/map-projections/content/exercise1-discover-coord.html#inspecting-the-metadata"><strong>Hint</strong></a></li>
-</ol>
-</section>
-<section id="exercise-2" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-2">Exercise 2</h3>
-<ol start="2" class="example" type="1">
-<li><p>In your own words, what does Project “On the Fly” do? <a href="https://ubc-library-rc.github.io/map-projections/content/exercise2-transform.html#exercise-2-projecting-on-the-fly"><strong>Hint</strong></a></p></li>
-<li><p>What UTM zone is Vancouver in?. <a href="https://ubc-library-rc.github.io/map-projections/content/exercise3-project.html#exercise-3-project-your-data"><strong>Hint</strong></a></p></li>
-</ol>
+<p><b>Please note:</b> The <a href="../2/questions.html">Lab Questions</a> corresponds to this lab assignment. There are questions you need to answer in the quiz that pertain to the lab, so its a good idea to skim the quiz questions before starting the lab.</p>
+<p>This page contains instructions for the lab assignment, follow them to work through the lab in ArcGIS Pro. There are links to documentation where applicable along with embedded screenshots and videos in the instructions at some steps for reference. Feel free to work with peers in your lab section and don’t hesitate to ask your TA for help!</p>
 <ul>
-<li>10 S</li>
-<li>11 N</li>
-<li>10 N</li>
-<li>18 N</li>
+<li><p><b>Warning:</b> The ArcGIS Pro software package is updated frequently. The exact name/position of tools may diverge slightly from what you see in the screenshots or videos. Don’t worry recreating what you see in the videos exactly - just use them as a guide to help you work through things.</p></li>
 </ul>
-</section>
-<section id="exercise-3" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-3">Exercise 3</h3>
-<ol start="4" class="example" type="1">
-<li>Use the <a href="https://mangomap.com/robertyoung/maps/69585/what-utm-zone-am-i-in-#">What UTM Zone am I in?</a> tool match find the UTM zones for these cities:</li>
-</ol>
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<p>This lab will help you understand coordinate systems and map projections. It is also broken into two parts.</p>
+<p><strong>First</strong> you will work through a tutorial on map projections to learn how to work with projections in ArcGIS Pro</p>
 <ul>
-<li>Inuvik, NWT, Canada</li>
-<li>Cape Town, South Africa</li>
-<li>Kyoto, Japan</li>
+<li>Complete the four exercises and answer a series of questions relating to content in each exercise.</li>
 </ul>
-</section>
-<section id="exercise-4" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-4">Exercise 4</h3>
-<ol start="5" class="example" type="1">
-<li>What spatial unit is the Shape_Area of the CAN_albersEA in? (Check the Spatial Reference Info). <a href="https://ubc-library-rc.github.io/map-projections/content/exercise4-pop-density.html#inspect-the-attribute-tables"><strong>Hint</strong></a></li>
-</ol>
+<p><strong>Then</strong> Make a visual comparison of four different coordinate systems that can be used to represent the Canada.</p>
 <ul>
-<li>Kilometers</li>
-<li>Meters</li>
-<li>Square Miles</li>
-<li>Square Kilometers</li>
-<li>Square Meters</li>
-<li>Degrees</li>
+<li>Submit a map and answer an essay question.</li>
 </ul>
-<ol start="6" class="example" type="1">
-<li>What is the difference in Shape_Area given for the CAN_webMercator and CAN_albersEA layers in <strong>Square Kilometers</strong>? Round to the nearest whole number. <a href="https://ubc-library-rc.github.io/map-projections/content/exercise4-pop-density.html#inspect-the-attribute-tables"><strong>Hint</strong></a></li>
-</ol>
-<ul>
-<li>Folder</li>
-<li>Zipfile</li>
-<li>Shapefile</li>
-<li>Geodatabase</li>
-</ul>
-<ol start="7" class="example" type="1">
-<li><p>We are multiplying by 1000000 to convert the units to population per square ____. <a href="https://ubc-library-rc.github.io/map-projections/content/exercise4-pop-density.html#calculating-population-density"><strong>Hint</strong></a></p></li>
-<li><p>What is the population density of the <strong>CAN_webMercator</strong> layer? Round your answer to the nearest hundredth place. <a href="https://ubc-library-rc.github.io/map-projections/content/exercise4-pop-density.html#calculating-population-density"><strong>Hint</strong></a></p></li>
-<li><p>What is the population density of the <strong>CAN_albersEA</strong> layer? Round your answer to the nearest hundredth place. <a href="https://ubc-library-rc.github.io/map-projections/content/exercise4-pop-density.html#calculating-population-density"><strong>Hint</strong></a></p></li>
-<li><p>How do the calculations compare? Which layer do you think has the most accurate Population Density and why? <a href="https://ubc-library-rc.github.io/map-projections/content/exercise4-pop-density.html#calculating-population-density"><strong>Hint</strong></a></p></li>
-</ol>
-</section>
-</section>
-<section id="part-2" class="level2">
-<h2 class="anchored" data-anchor-id="part-2">Part 2</h2>
-<ol start="11" class="example" type="1">
-<li><p>Submit your figure showing Canada in the four different coordinate systems. <a href="../2/instructions.html#four-ways-to-display-canada"><strong>Hint</strong></a></p></li>
-<li><p>Write a <strong>paragraph or two</strong> comparing and contrasting the four different coordinate systems. What are the differences/similarities between them? If you wanted to make a map of population totals by province, which coordinate system(s) would you choose? What if you wanted to make a map of population <strong>density</strong> by province, which coordinate system(s) would you choose? <a href="../2/instructions.html#four-ways-to-display-canada"><strong>Hint</strong></a></p></li>
-</ol>
+<section id="warning" class="level2">
+<h2 class="anchored" data-anchor-id="warning">Warning</h2>
+<p>If you are working on a geography lab computer <strong>Make Sure</strong> you are familiar with the procedures for <a href="../../LabInfo/geogComputers.html#data-management">saving your labs</a>!</p>
 
 
 </section>

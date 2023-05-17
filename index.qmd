@@ -1,5 +1,5 @@
 ---
-title: "Lab Assignments"
+title: "Home"
 ---
 
-This site holds info for GEOS 270 Labs.
+Homepage

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GEOS 270 Labs - Coordinate Reference Systems</title>
+<title>GEOS 270 Labs - ArcGIS Pro Access</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -60,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -80,11 +80,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html">
+    <a class="nav-link active" href="../index.html" aria-current="page">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../labs.html" aria-current="page">
+    <a class="nav-link" href="../labs.html">
  <span class="menu-text">Lab Assignments</span></a>
   </li>  
 </ul>
@@ -101,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Coordinate Reference Systems</h1>
+      <h1 class="quarto-secondary-nav-title">ArcGIS Pro Access</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -116,45 +116,25 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../labs.html" class="sidebar-item-text sidebar-link">Lab Assignments</a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link">Home</a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../1/objectives.html" class="sidebar-item-text sidebar-link">Lab 1</a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a href="../LabInfo/labInfo.html" class="sidebar-item-text sidebar-link">Lab Info</a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../1/instructions.html" class="sidebar-item-text sidebar-link">Introduction to ArcGIS Pro</a>
+  <a href="../LabInfo/softwareAccess.html" class="sidebar-item-text sidebar-link active">ArcGIS Pro Access</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../1/questions.html" class="sidebar-item-text sidebar-link">Lab Assignment Questions</a>
-  </div>
-</li>
-      </ul>
-  </li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../2/objectives.html" class="sidebar-item-text sidebar-link active">Lab 2</a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../2/instructions.html" class="sidebar-item-text sidebar-link">Coordinate Reference Systems</a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../2/questions.html" class="sidebar-item-text sidebar-link">Lab Assignment Questions</a>
+  <a href="../LabInfo/geogComputers.html" class="sidebar-item-text sidebar-link">Using Geography Lab Computers</a>
   </div>
 </li>
       </ul>
@@ -168,9 +148,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <li><a href="#option-1-purchase-a-student-license" id="toc-option-1-purchase-a-student-license" class="nav-link active" data-scroll-target="#option-1-purchase-a-student-license">Option 1: Purchase a Student License</a></li>
+  <li><a href="#option-2-geography-lab-computers" id="toc-option-2-geography-lab-computers" class="nav-link" data-scroll-target="#option-2-geography-lab-computers">Option 2: Geography Lab Computers</a>
   <ul class="collapse">
-  <li><a href="#warning" id="toc-warning" class="nav-link" data-scroll-target="#warning">Warning</a></li>
+  <li><a href="#lab-fee" id="toc-lab-fee" class="nav-link" data-scroll-target="#lab-fee">Lab fee</a></li>
+  <li><a href="#remote-access" id="toc-remote-access" class="nav-link" data-scroll-target="#remote-access">Remote Access</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -180,7 +162,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Coordinate Reference Systems</h1>
+<h1 class="title d-none d-lg-block">ArcGIS Pro Access</h1>
 </div>
 
 
@@ -195,25 +177,36 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><b>Please note:</b> The <a href="../2/questions.html">Lab Questions</a> corresponds to this lab assignment. There are questions you need to answer in the quiz that pertain to the lab, so its a good idea to skim the quiz questions before starting the lab.</p>
-<p>This page contains instructions for the lab assignment, follow them to work through the lab in ArcGIS Pro. There are links to documentation where applicable along with embedded screenshots and videos in the instructions at some steps for reference. Feel free to work with peers in your lab section and don’t hesitate to ask your TA for help!</p>
+<p>You will be using the ArcGIS Pro software package to complete your lab assignments. This is a proprietary program (it costs money) that can <strong>only</strong> be run on the Windows operating system. There are two options for accessing the software.</p>
+<section id="option-1-purchase-a-student-license" class="level1">
+<h1>Option 1: Purchase a Student License</h1>
+<p>You may purchase a student version of the software to install on your own computer for $20. ArcGIS Pro only runs on the <strong>Windows</strong> OS.</p>
+<ol type="1">
+<li><p>Check that your computer meets the system requirements for ArcPro using <a href="http://www.systemrequirementslab.com/Client/Standard/?apikey=50F41142-39B0-4061-97C2-BA7B7FE43D0E&amp;refid=1186&amp;item=12433">this link</a>.</p></li>
+<li><p>Go <a href="https://gis.ubc.ca/software/">here</a> to purchase, ArcGIS Pro. Fill out the info, make your payment, and you should be given and ArcOnline Account and a link to download ArcGIS Pro.</p></li>
+</ol>
 <ul>
-<li><p><b>Warning:</b> The ArcGIS Pro software package is updated frequently. The exact name/position of tools may diverge slightly from what you see in the screenshots or videos. Don’t worry recreating what you see in the videos exactly - just use them as a guide to help you work through things.</p></li>
+<li>If you run into any issues, contact Jose Aparicio at: labhelp@geog.ubc.ca</li>
 </ul>
-<section id="overview" class="level1">
-<h1>Overview</h1>
-<p>This lab will help you understand coordinate systems and map projections. It is also broken into two parts.</p>
-<p><strong>First</strong> you will work through a tutorial on map projections to learn how to work with projections in ArcGIS Pro</p>
+</section>
+<section id="option-2-geography-lab-computers" class="level1">
+<h1>Option 2: Geography Lab Computers</h1>
+<p>The Geography Department has two computer labs (rooms 115 and 237). They may be accessed in-person when the geography building is open or they can be accessed via remote desktop connection 24 hours a day, 7 days a week. All students will be given a UBC Geography logon, you should receive logon credentials by email before the first day of lab.</p>
+<section id="lab-fee" class="level2">
+<h2 class="anchored" data-anchor-id="lab-fee">Lab fee</h2>
+<p>There is a lab fee to use geography computers. You must <a href="https://geog-epayment.sites.olt.ubc.ca/fees/geoglab-fees/">pay the lab fee</a> or you will loose access to your account. The lab fee is due by Friday June 2nd</p>
 <ul>
-<li>Complete the four exercises and answer a series of questions relating to content in each exercise.</li>
+<li>If you have not received logon credentials, contact Jose Aparicio at: labhelp@geog.ubc.ca</li>
 </ul>
-<p><strong>Then</strong> Make a visual comparison of four different coordinate systems that can be used to represent the Canada.</p>
+</section>
+<section id="remote-access" class="level2">
+<h2 class="anchored" data-anchor-id="remote-access">Remote Access</h2>
+<p>To remotely access lab computers, follow <a href="RemoteDesktop.pdf">these instructions</a>. Information about the Geography Computer Labs can be found <a href="https://geog.ubc.ca/undergraduate/study-resources/">here</a>.</p>
 <ul>
-<li>Submit a map and answer an essay question.</li>
+<li><p><strong>Note</strong> the lab schedule and refrain from remotely accessing a computer while other courses are holding lab session in that room. When accessing computers remotely - try to use computers that are located in room 239 as those are less likely to result in conflicts with in-person users.</p></li>
+<li><p><strong>If you are having trouble logging on remotely</strong> try: adding “geoglab" in front of your username.</p></li>
 </ul>
-<section id="warning" class="level2">
-<h2 class="anchored" data-anchor-id="warning">Warning</h2>
-<p>If you are working on a geography lab computer <strong>Make Sure</strong> you are familiar with the procedures for <a href="../../LabInfo/geogComputers.html#data-management">saving your labs</a>!</p>
+<p><img src="images/remoteLoginScreen.png" class="img-fluid"></p>
 
 
 </section>

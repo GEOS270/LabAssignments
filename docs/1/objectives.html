@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>GEOS 270 Labs - Lab Sessions</title>
+<title>GEOS 270 Labs - Introduction to ArcGIS Pro</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -60,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -80,11 +80,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="../index.html" aria-current="page">
+    <a class="nav-link" href="../index.html">
  <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../labs.html">
+    <a class="nav-link active" href="../labs.html" aria-current="page">
  <span class="menu-text">Lab Assignments</span></a>
   </li>  
 </ul>
@@ -101,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Lab Sessions</h1>
+      <h1 class="quarto-secondary-nav-title">Introduction to ArcGIS Pro</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -116,12 +116,12 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../index.html" class="sidebar-item-text sidebar-link">Lab Assignments</a>
+  <a href="../labs.html" class="sidebar-item-text sidebar-link">Lab Assignments</a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../LabInfo/labInfo.html" class="sidebar-item-text sidebar-link active">Lab Info</a>
+            <a href="../1/objectives.html" class="sidebar-item-text sidebar-link active">Lab 1</a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -129,12 +129,32 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../LabInfo/softwareAccess.html" class="sidebar-item-text sidebar-link">ArcGIS Pro Access</a>
+  <a href="../1/instructions.html" class="sidebar-item-text sidebar-link">Introduction to ArcGIS Pro</a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../LabInfo/geogComputers.html" class="sidebar-item-text sidebar-link">Using Geography Lab Computers</a>
+  <a href="../1/questions.html" class="sidebar-item-text sidebar-link">Lab Assignment Questions</a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../2/objectives.html" class="sidebar-item-text sidebar-link">Lab 2</a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../2/instructions.html" class="sidebar-item-text sidebar-link">Coordinate Reference Systems</a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../2/questions.html" class="sidebar-item-text sidebar-link">Lab Assignment Questions</a>
   </div>
 </li>
       </ul>
@@ -148,7 +168,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#your-tas" id="toc-your-tas" class="nav-link active" data-scroll-target="#your-tas">Your TAs</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <ul class="collapse">
+  <li><a href="#warning" id="toc-warning" class="nav-link" data-scroll-target="#warning">Warning</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -157,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Lab Sessions</h1>
+<h1 class="title d-none d-lg-block">Introduction to ArcGIS Pro</h1>
 </div>
 
 
@@ -172,107 +195,30 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>Labs assignments build on the topics covered in lecture. They focus on GIS applications, giving you a chance to get hands on practice working with GIS software (ArcGIS Pro). Most labs have associated videos and/or readings. There is no textbook for the course, pdf files will be provided where applicable. You can work through the labs in your lab section but they may also require some extra time outside of scheduled lab hours.</p>
+<p><b>Please note:</b> The <a href="../1/questions.html">Lab Questions</a> corresponds to this lab assignment. There are questions you need to answer in the quiz that pertain to the lab, so its a good idea to skim the quiz questions before starting the lab.</p>
+<p>This page contains instructions for the lab assignment, follow them to work through the lab in ArcGIS Pro. There are links to documentation where applicable along with embedded screenshots and videos in the instructions at some steps for reference. Feel free to work with peers in your lab section and don’t hesitate to ask your TA for help!</p>
 <ul>
-<li>Labs will be formatted as open help sessions. They are your chance to get one-on-one help from your TA and you may also use them to work collaboratively with your classmates.
-<ul>
-<li>Lab attendance is not mandatory, but it is strongly encouraged.</li>
-</ul></li>
-<li>There is course <a href="https://piazza.com/ubc.ca/summer2023/geos270">piazza</a> page which you can use post/answer questions about the lab materials.</li>
+<li><p><b>Warning:</b> The ArcGIS Pro software package is updated frequently. The exact name/position of tools may diverge slightly from what you see in the screenshots or videos. Don’t worry recreating what you see in the videos exactly - just use them as a guide to help you work through things.</p></li>
 </ul>
-<div class="cell">
-<div class="cell-output-display">
-<div id="tbl-lab-times" class="anchored">
-<table class="table table-sm table-striped">
-<caption>Table&nbsp;1: Lab Sections</caption>
-<colgroup>
-<col style="width: 20%">
-<col style="width: 40%">
-<col style="width: 40%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: left;">Section</th>
-<th style="text-align: left;">Time</th>
-<th style="text-align: left;">Location</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">L1A</td>
-<td style="text-align: left;">Tue &amp; Thu, 15:00-17:00</td>
-<td style="text-align: left;">Room 115</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">L2A</td>
-<td style="text-align: left;">Wed &amp; Fri, 10:00-12:00</td>
-<td style="text-align: left;">Hybrid Room 115 or <a href="https://ubc.zoom.us/j/63605592624?pwd=dEd6TExsd29RQmc2dzJ6NGVZTDN2UT09">Zoom</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<section id="your-tas" class="level1">
-<h1>Your TAs</h1>
-<hr>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img src="images/Zijie.jpg" class="img-fluid" style="width:85.0%"></p>
-</div><div class="column" style="width:70%;">
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Name</td>
-<td style="text-align: left;"><p>Zijie Chai</p></td>
-</tr>
-<tr class="even">
-<td>Pronouns</td>
-<td style="text-align: left;"><p>She/Her/Hers</p></td>
-</tr>
-<tr class="odd">
-<td>Email</td>
-<td style="text-align: left;"><p>zijie01@mail.ubc.ca</p></td>
-</tr>
-<tr class="even">
-<td>Office</td>
-<td style="text-align: left;"><p>Room 225, Geography Bldg.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>My name is Zijie and I am a MSc student in Geography, studying the Contributions of glaciers to streamflow and how they have varied in response to climatic variability and glacier changes in Columbia River Basin. My background has mostly been focused on hydrology, a little on Hydrogeology and Biohydrology. In my free time I enjoy hiking, SUP, traveling, trying new food and watching movies!</p>
-<hr>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img src="images/Nastaran.jpg" class="img-fluid" style="width:85.0%"></p>
-</div><div class="column" style="width:70%;">
-<table class="table">
-<tbody>
-<tr class="odd">
-<td>Name</td>
-<td style="text-align: left;"><p>Nastaran Pournematollahi</p></td>
-</tr>
-<tr class="even">
-<td>Pronouns</td>
-<td style="text-align: left;"><p>She/Her/Hers</p></td>
-</tr>
-<tr class="odd">
-<td>Email</td>
-<td style="text-align: left;"><p>Nasipour@mail.ubc.ca</p></td>
-</tr>
-<tr class="even">
-<td>Office</td>
-<td style="text-align: left;"><p>Room 144, Geography Bldg.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>My name is Nastaran Nematolahi, and I am a second-year Ph.D.&nbsp;student in Geography. I am a physical geographer with a strong interest in river morphodynamics and environmental hydraulics. My research focuses on alluvial fans and the processes that operate on them. I also have a Master’s degree in Hydraulic Structures, which has given me a diverse background in the field. In my free time, I enjoy dancing and ice skating</p>
+<section id="overview" class="level1">
+<h1>Overview</h1>
+<p>This lab will help you get your bearings working with ArcGIS Pro. It is broken into two parts.</p>
+<p><strong>First</strong> you will work through some tutorial materials put together by ESRI to gain some familiarity with using ArcGIS Pro.</p>
+<ul>
+<li>You will complete the ArcGIS Pro Tutorial to make your first map!<br>
+</li>
+<li>Then watch a few videos to gain familiarity with some other aspects of the application.</li>
+</ul>
+<p><strong>Then</strong> you will recreate an example from history using modern geospatial analysis methods. Dr.&nbsp;John Snow was the first person to prove that Cholera was a waterborne pathogen. He used manual surveying, a paper map, and rudimentary geospatial analysis to identify a well as the source of a Cholera out break in London.</p>
+<ul>
+<li>You will apply a modern method known as <a href="https://pro.arcgis.com/en/pro-app/latest/tool-reference/spatial-analyst/kernel-density.htm">kernel density</a> to recreate this analysis and see if you can find the well that caused the outbreak.</li>
+</ul>
+<section id="warning" class="level2">
+<h2 class="anchored" data-anchor-id="warning">Warning</h2>
+<p>If you are working on a geography lab computer <strong>Make Sure</strong> you are familiar with the procedures for <a href="../../LabInfo/geogComputers.html#data-management">saving your labs</a>!</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
